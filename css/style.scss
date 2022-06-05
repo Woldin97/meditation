@@ -1,0 +1,230 @@
+@import "normalize.scss";
+
+// === Mixins === //
+
+@mixin font-heebo {
+    font-family: 'Heebo', sans-serif;
+}
+
+@mixin font-merienda-one {
+    font-family: 'Merienda One', cursive;
+}
+
+// === / Mixins === //
+
+// === Variables === //
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+// === / Variables === //
+
+// === Common === //
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @include font-heebo();
+}
+
+.section-inner {
+    margin: 0 auto;
+}
+
+// === / Common === //
+
+// === Header === //
+
+.section-header {
+    height: 130px;
+    background-color: $color-white;
+    padding: 10px 150px 10px 150px;
+
+    .section-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    img {
+        width: 150px;
+        height: 120px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+    }
+
+    li {
+        padding-right: 75px;
+        font-weight: 400px;
+        font-size: 28px;
+        line-height: 40px;
+
+        a {
+            color: $color-black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #1a7f72;
+            transition: 0.2s;
+        }
+    }
+}
+
+// === / Header === //
+
+// === Hero section === //
+.section-hero {
+    background: url(../img/background-hero.png);
+    background-size: 100% 100%;
+    text-align: center;
+    padding-top: 70px;
+
+    &__title {
+        @include font-merienda-one();
+        margin: 0 auto 22px;
+        width: 45%;
+        font-weight: 400px;
+        font-size: 68px;
+        line-height: 88px;
+        color: $color-white;
+    }
+
+    &__description {
+        margin: 0 auto 30px;
+        font-weight: 400px;
+        font-size: 24px;
+        line-height: 30px;
+        width: 55%;
+        color: rgba($color-black, 0.5)
+
+    }
+
+    &__button {
+        margin: 0 auto 70px;
+
+        button {
+            margin: 0;
+            width: 300px;
+            height: 75px;
+            padding: 20px 90px;
+            border-radius: 50px;
+            background: linear-gradient(#259385, #159685);
+            color: $color-white;
+            font-weight: 700px;
+            font-size: 30px;
+            line-height: 130%;
+            text-align: center;
+            border: 0;
+            cursor: pointer;
+            box-shadow: 0px 20px 40px 0px rgba(21, 113, 101, 0.2);
+        }
+    }
+
+    &__content {
+        img {
+            width: 590px;
+            height: 560px;
+        }
+    }
+
+}
+
+// === / Hero section === //
+
+// === Section2 === //
+.section-second {
+    padding: 120px 150px 40px 150px;
+    background-color: $color-white;
+
+    .cards-list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+
+        .cards-item {
+            margin-right: 180px;
+            margin-top: 180px;
+            padding-top: 50px;
+            height: 540px;
+            width: 420px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0px 20px 50px rgba(26, 127, 114, 0.15);
+
+            &__icon {
+                margin-bottom: 20px;
+            }
+ 
+            &__title {
+                font-size: 32px;
+                font-weight: 500px;
+                line-height: 48px;
+                margin-bottom: 20px;
+            }
+ 
+             &__description {
+                margin: 0 auto;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 24px;
+                margin: 0 48px 0 48px;
+            }
+ 
+            &__button {
+                margin-top: 72px;
+                margin-bottom: 96px;
+ 
+                button {
+                    width: 210px;
+                    height: 55px;
+                    border: 0;
+                    border-radius: 30px;
+                    background: linear-gradient(180deg, #259385 0%, #159685 100%);
+                    box-shadow: 0px 13px 28px rgba(26, 117, 114, 0.2);
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 130%;
+                    color: $color-white;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .cards-item.meditation {
+            background: url(../img/recctangle.png);
+            background-position: center;
+            
+        }
+    }
+}
+
+// === / Section2 === //
+
+// === Practice === //
+
+// === / Practice === //
+
+// === Music === //
+
+// === / Music === //
+
+// === Best of meditation === //
+
+// === / Best of meditation === //
+
+// === Transform your body === //
+
+// === / Transform your body === //
+
+// === Footer === //
+
+// === / Footer === //
