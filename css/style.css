@@ -486,6 +486,88 @@ body {
   cursor: pointer;
 }
 .section-second .cards-list .cards-item.meditation {
-  background: url(../img/recctangle.png);
+  background: url(../img/recctangle_meditation.png);
   background-position: center;
+}
+.section-second .cards-list .cards-item.yoga {
+  background: url(../img/recctangle_yoga.png);
+  background-position: center;
+}
+.section-second .cards-list .cards-item.sound {
+  background: url(../img/recctangle_sound.png);
+  background-position: center;
+}
+
+.section-practice {
+  margin-top: 40px;
+  padding-top: 70px;
+  text-align: center;
+}
+.section-practice__title {
+  font-family: "Merienda One", cursive;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 70px;
+  margin: 0 auto 22px;
+  width: 40%;
+  color: #000000;
+}
+.section-practice__description {
+  font-family: "Heebo", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0 auto;
+  color: rgba(0, 0, 0, 0.5);
+  width: 56%;
+}
+.section-practice__content {
+  padding: 70px 150px 120px 150px;
+  display: flex;
+}
+.section-practice__content-exercise {
+  margin-left: 156px;
+  background: url(../img/exercise-background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.section-practice__content-exercise .exercise-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.section-practice__content-exercise .exercise-item {
+  width: 718px;
+  height: 234px;
+  padding: 40px;
+  text-align: start;
+  cursor: pointer;
+}
+.section-practice__content-exercise .exercise-item__title {
+  font-family: "Heebo", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 48px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.section-practice__content-exercise .exercise-item__description {
+  padding-top: 10px;
+  font-family: "Heebo", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.section-practice__content-exercise .exercise-item__arrow {
+  display: flex;
+  visibility: hidden;
+  justify-content: end;
+}
+.section-practice__content-exercise .exercise-item:hover {
+  background: url(../img/rectangle-exercise-meditation.png);
+  background-position: center;
+  box-shadow: 0px 8px 50px rgba(26, 127, 114, 0.2);
+}
+.section-practice__content-exercise .exercise-item:hover .exercise-item__arrow {
+  visibility: visible;
 }

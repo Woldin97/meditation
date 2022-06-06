@@ -197,12 +197,21 @@ body {
                     cursor: pointer;
                 }
             }
-        }
 
-        .cards-item.meditation {
-            background: url(../img/recctangle.png);
-            background-position: center;
-            
+            &.meditation {
+                background: url(../img/recctangle_meditation.png);
+                background-position: center;
+            }
+
+            &.yoga {
+                background: url(../img/recctangle_yoga.png);
+                background-position: center;
+            }
+
+            &.sound {
+                background: url(../img/recctangle_sound.png);
+                background-position: center;
+            }
         }
     }
 }
@@ -210,6 +219,91 @@ body {
 // === / Section2 === //
 
 // === Practice === //
+.section-practice {
+    margin-top: 40px;
+    padding-top: 70px;
+    text-align: center;
+
+    &__title {
+        @include font-merienda-one();
+        font-weight: 400;
+        font-size: 54px;
+        line-height: 70px;
+        margin: 0 auto 22px;
+        width: 40%;
+        color: $color-black;
+    }
+
+    &__description {
+        @include font-heebo();
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 30px;
+        margin: 0 auto;
+        color: rgba($color-black, 0.5);
+        width: 56%;
+    }
+
+    &__content {
+        padding: 70px 150px 120px 150px;
+        display: flex;
+
+        &-exercise {
+            margin-left: 156px;
+            background: url(../img/exercise-background.png);
+            background-position: center;
+            background-repeat: no-repeat;
+
+            .exercise-list {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
+
+            .exercise-item {
+                width: 718px;
+                height: 234px;
+                padding: 40px;
+                text-align: start;
+                cursor: pointer;
+                
+                &__title {
+                    @include font-heebo();
+                    font-weight: 500;
+                    font-size: 32px;
+                    line-height: 48px;
+                    color: rgba($color-black, 0.8);
+                    
+                }
+
+                &__description {
+                    padding-top: 10px;
+                    @include font-heebo();
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 30px;
+                    color: rgba($color-black, 0.5);
+                }
+
+                &__arrow {
+                    display: flex;
+                    visibility: hidden;
+                    justify-content: end;
+                }
+
+                &:hover {
+                    background: url(../img/rectangle-exercise-meditation.png);
+                    background-position: center;
+                    box-shadow: 0px 8px 50px rgba(26, 127, 114, 0.2);
+                }
+            }
+
+            .exercise-item:hover .exercise-item__arrow {
+                visibility: visible;
+            }
+        }
+    }
+}
 
 // === / Practice === //
 
