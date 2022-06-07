@@ -151,8 +151,8 @@ body {
         flex-wrap: wrap;
 
         .cards-item {
-            margin-right: 180px;
-            margin-top: 180px;
+            margin-right: 110px;
+            margin-top: 110px;
             padding-top: 50px;
             height: 540px;
             width: 420px;
@@ -223,6 +223,9 @@ body {
     margin-top: 40px;
     padding-top: 70px;
     text-align: center;
+    background: url(../img/exercise-background.png);
+    background-position: right;
+    background-repeat: no-repeat;
 
     &__title {
         @include font-merienda-one();
@@ -248,11 +251,9 @@ body {
         padding: 70px 150px 120px 150px;
         display: flex;
 
+
         &-exercise {
-            margin-left: 156px;
-            background: url(../img/exercise-background.png);
-            background-position: center;
-            background-repeat: no-repeat;
+            margin-left: 156px;           
 
             .exercise-list {
                 margin: 0;
