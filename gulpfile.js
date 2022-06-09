@@ -1,7 +1,6 @@
 const gulp = require("gulp");
 const sass = require('gulp-sass')(require('sass'));
 const browserSync = require("browser-sync");
-const gulpStylelint = require("gulp-stylelint");
 
 function style () {
     return gulp.src("./css/**/*.scss")
