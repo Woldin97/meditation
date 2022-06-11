@@ -309,6 +309,80 @@ body {
 // === / Practice === //
 
 // === Music === //
+.section-music {
+    padding-top: 60px;
+    text-align: center;
+    background: url("../img/background-music.png");
+    background-size: 100% 100%;
+
+    &__title {
+        @include font-merienda-one;
+
+        margin: 0 auto 22px;
+        font-size: 54px;
+        font-weight: 400;
+        line-height: 70px;
+        color: $color-black;
+    }
+
+    &__description {
+        @include font-heebo;
+
+        width: 58%;
+        margin: 0 auto;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 30px;
+        color: rgba($color-black, 0.5);
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding: 70px 150px 120px;
+    }
+
+    .music-list {
+        padding-top: 0;
+        margin: 65px 0 0;
+        list-style-type: none;
+    }
+
+    .music-item {
+        display: flex;
+        justify-content: space-between;
+        width: 650px;
+        height: 150px;
+        padding: 30px 40px;
+        margin-bottom: 50px;
+        text-align: left;
+        background-image: url("../img/music-item-background.png");
+        background-repeat: no-repeat;
+
+        &__title {
+            @include font-heebo;
+
+            margin-bottom: 10px;
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 48px;
+        }
+
+        &__description {
+            @include font-heebo;
+
+            margin: 0 auto;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 30px;
+            color: rgba($color-black, 0.5);
+        }
+    }
+
+    .button-play-music {
+        cursor: pointer;
+    }
+}
 
 // === / Music === //
 

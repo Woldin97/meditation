@@ -342,7 +342,7 @@ template {
 }
 
 body {
-  font-family: "Heebo", sans-serif;
+  font-family: Heebo, sans-serif;
 }
 
 .section-inner {
@@ -351,8 +351,8 @@ body {
 
 .section-header {
   height: 130px;
-  background-color: #ffffff;
-  padding: 10px 150px 10px 150px;
+  padding: 10px 150px;
+  background-color: #fff;
 }
 .section-header .section-inner {
   display: flex;
@@ -364,19 +364,19 @@ body {
   height: 120px;
 }
 .section-header ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 .section-header li {
   padding-right: 75px;
-  font-weight: 400px;
   font-size: 28px;
+  font-weight: 400px;
   line-height: 40px;
 }
 .section-header li a {
-  color: #000000;
+  color: #000;
   text-decoration: none;
 }
 .section-header li a:hover {
@@ -385,46 +385,46 @@ body {
 }
 
 .section-hero {
-  background: url(../img/background-hero.png);
-  background-size: 100% 100%;
-  text-align: center;
   padding-top: 70px;
+  text-align: center;
+  background: url("../img/background-hero.png");
+  background-size: 100% 100%;
 }
 .section-hero__title {
   font-family: "Merienda One", cursive;
-  margin: 0 auto 22px;
   width: 45%;
-  font-weight: 400px;
+  margin: 0 auto 22px;
   font-size: 68px;
+  font-weight: 400px;
   line-height: 88px;
-  color: #ffffff;
+  color: #fff;
 }
 .section-hero__description {
-  margin: 0 auto 30px;
-  font-weight: 400px;
-  font-size: 24px;
-  line-height: 30px;
   width: 55%;
+  margin: 0 auto 30px;
+  font-size: 24px;
+  font-weight: 400px;
+  line-height: 30px;
   color: rgba(0, 0, 0, 0.5);
 }
 .section-hero__button {
   margin: 0 auto 70px;
 }
 .section-hero__button button {
-  margin: 0;
   width: 300px;
   height: 75px;
   padding: 20px 90px;
-  border-radius: 50px;
-  background: linear-gradient(#259385, #159685);
-  color: #ffffff;
-  font-weight: 700px;
+  margin: 0;
   font-size: 30px;
+  font-weight: 700px;
   line-height: 130%;
+  color: #fff;
   text-align: center;
-  border: 0;
   cursor: pointer;
-  box-shadow: 0px 20px 40px 0px rgba(21, 113, 101, 0.2);
+  background: linear-gradient(#259385, #159685);
+  border: 0;
+  border-radius: 50px;
+  box-shadow: 0 20px 40px 0 rgba(21, 113, 101, 0.2);
 }
 .section-hero__content img {
   width: 590px;
@@ -432,142 +432,204 @@ body {
 }
 
 .section-second {
-  padding: 120px 150px 40px 150px;
-  background-color: #ffffff;
+  padding: 120px 150px 40px;
+  background-color: #fff;
 }
 .section-second .cards-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
-.section-second .cards-list .cards-item {
-  margin-right: 110px;
-  margin-top: 110px;
-  padding-top: 50px;
-  height: 540px;
+.section-second .cards-item {
   width: 420px;
-  border-radius: 20px;
+  height: 540px;
+  padding-top: 50px;
+  margin-top: 110px;
+  margin-right: 110px;
   text-align: center;
-  box-shadow: 0px 20px 50px rgba(26, 127, 114, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(26, 127, 114, 0.15);
 }
-.section-second .cards-list .cards-item__icon {
+.section-second .cards-item__icon {
   margin-bottom: 20px;
 }
-.section-second .cards-list .cards-item__title {
+.section-second .cards-item__title {
+  margin-bottom: 20px;
   font-size: 32px;
   font-weight: 500px;
   line-height: 48px;
-  margin-bottom: 20px;
 }
-.section-second .cards-list .cards-item__description {
-  margin: 0 auto;
+.section-second .cards-item__description {
+  margin: 0 48px;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
-  margin: 0 48px 0 48px;
 }
-.section-second .cards-list .cards-item__button {
+.section-second .cards-item__button {
   margin-top: 72px;
   margin-bottom: 96px;
 }
-.section-second .cards-list .cards-item__button button {
+.section-second .cards-item__button button {
   width: 210px;
   height: 55px;
-  border: 0;
-  border-radius: 30px;
-  background: linear-gradient(180deg, #259385 0%, #159685 100%);
-  box-shadow: 0px 13px 28px rgba(26, 117, 114, 0.2);
   font-size: 24px;
   font-weight: 400;
   line-height: 130%;
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
+  background: linear-gradient(180deg, #259385 0%, #159685 100%);
+  border: 0;
+  border-radius: 30px;
+  box-shadow: 0 13px 28px rgba(26, 117, 114, 0.2);
 }
-.section-second .cards-list .cards-item.meditation {
-  background: url(../img/recctangle_meditation.png);
+.section-second .cards-item.meditation {
+  background: url("../img/recctangle_meditation.png");
   background-position: center;
 }
-.section-second .cards-list .cards-item.yoga {
-  background: url(../img/recctangle_yoga.png);
+.section-second .cards-item.yoga {
+  background: url("../img/recctangle_yoga.png");
   background-position: center;
 }
-.section-second .cards-list .cards-item.sound {
-  background: url(../img/recctangle_sound.png);
+.section-second .cards-item.sound {
+  background: url("../img/recctangle_sound.png");
   background-position: center;
 }
 
 .section-practice {
-  margin-top: 40px;
   padding-top: 70px;
+  margin-top: 40px;
   text-align: center;
-  background: url(../img/exercise-background.png);
-  background-position: right;
+  background: url("../img/exercise-background.png");
   background-repeat: no-repeat;
+  background-position: right;
 }
 .section-practice__title {
   font-family: "Merienda One", cursive;
-  font-weight: 400;
-  font-size: 54px;
-  line-height: 70px;
-  margin: 0 auto 22px;
   width: 40%;
-  color: #000000;
+  margin: 0 auto 22px;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 70px;
+  color: #000;
 }
 .section-practice__description {
-  font-family: "Heebo", sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 30px;
-  margin: 0 auto;
-  color: rgba(0, 0, 0, 0.5);
+  font-family: Heebo, sans-serif;
   width: 56%;
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.5);
 }
 .section-practice__content {
-  padding: 70px 150px 120px 150px;
   display: flex;
+  padding: 70px 150px 120px;
 }
 .section-practice__content-exercise {
   margin-left: 156px;
 }
-.section-practice__content-exercise .exercise-list {
-  margin: 0;
+.section-practice__content .exercise-list {
   padding: 0;
+  margin: 0;
   list-style-type: none;
 }
-.section-practice__content-exercise .exercise-item {
+.section-practice__content .exercise-item {
   width: 718px;
   height: 234px;
   padding: 40px;
   text-align: start;
   cursor: pointer;
 }
-.section-practice__content-exercise .exercise-item__title {
-  font-family: "Heebo", sans-serif;
-  font-weight: 500;
+.section-practice__content .exercise-item__title {
+  font-family: Heebo, sans-serif;
   font-size: 32px;
+  font-weight: 500;
   line-height: 48px;
   color: rgba(0, 0, 0, 0.8);
 }
-.section-practice__content-exercise .exercise-item__description {
+.section-practice__content .exercise-item__description {
+  font-family: Heebo, sans-serif;
   padding-top: 10px;
-  font-family: "Heebo", sans-serif;
-  font-weight: 400;
   font-size: 24px;
+  font-weight: 400;
   line-height: 30px;
   color: rgba(0, 0, 0, 0.5);
 }
-.section-practice__content-exercise .exercise-item__arrow {
+.section-practice__content .exercise-item__arrow {
   display: flex;
-  visibility: hidden;
   justify-content: end;
+  visibility: hidden;
 }
-.section-practice__content-exercise .exercise-item:hover {
-  background: url(../img/rectangle-exercise-meditation.png);
+.section-practice__content .exercise-item:hover {
+  background: url("../img/rectangle-exercise-meditation.png");
   background-position: center;
-  box-shadow: 0px 8px 50px rgba(26, 127, 114, 0.2);
+  box-shadow: 0 8px 50px rgba(26, 127, 114, 0.2);
 }
-.section-practice__content-exercise .exercise-item:hover .exercise-item__arrow {
+.exercise-item:hover .section-practice__content__arrow {
   visibility: visible;
+}
+
+.section-music {
+  padding-top: 60px;
+  text-align: center;
+  background: url("../img/background-music.png");
+  background-size: 100% 100%;
+}
+.section-music__title {
+  font-family: "Merienda One", cursive;
+  margin: 0 auto 22px;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 70px;
+  color: #000;
+}
+.section-music__description {
+  font-family: Heebo, sans-serif;
+  width: 58%;
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.section-music__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 70px 150px 120px;
+}
+.section-music .music-list {
+  padding-top: 0;
+  margin: 65px 0 0;
+  list-style-type: none;
+}
+.section-music .music-item {
+  display: flex;
+  justify-content: space-between;
+  width: 650px;
+  height: 150px;
+  padding: 30px 40px;
+  margin-bottom: 50px;
+  text-align: left;
+  background-image: url("../img/music-item-background.png");
+  background-repeat: no-repeat;
+}
+.section-music .music-item__title {
+  font-family: Heebo, sans-serif;
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+}
+.section-music .music-item__description {
+  font-family: Heebo, sans-serif;
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.section-music .button-play-music {
+  cursor: pointer;
 }
