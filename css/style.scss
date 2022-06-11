@@ -313,7 +313,7 @@ body {
     padding-top: 60px;
     text-align: center;
     background: url("../img/background-music.png");
-    background-size: 100% 100%;
+    background-size: cover;
 
     &__title {
         @include font-merienda-one;
@@ -349,15 +349,25 @@ body {
     }
 
     .music-item {
-        display: flex;
-        justify-content: space-between;
         width: 650px;
         height: 150px;
-        padding: 30px 40px;
-        margin-bottom: 50px;
-        text-align: left;
-        background-image: url("../img/music-item-background.png");
-        background-repeat: no-repeat;
+        margin-bottom: 35px;
+
+        &__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px 40px;
+            text-align: left;
+            background-image: url("../img/music-item-background.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        &__information {
+            padding: 0 80px;
+        }
 
         &__title {
             @include font-heebo;
