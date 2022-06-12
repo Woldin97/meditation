@@ -10,6 +10,12 @@
     font-family: "Merienda One", cursive;
 }
 
+@mixin font-description {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
 // === / Mixins === //
 
 // === Variables === //
@@ -80,6 +86,7 @@ body {
 // === / Header === //
 
 // === Hero section === //
+
 .section-hero {
     padding-top: 70px;
     text-align: center;
@@ -98,11 +105,11 @@ body {
     }
 
     &__description {
+        @include font-heebo;
+        @include font-description;
+
         width: 55%;
         margin: 0 auto 30px;
-        font-size: 24px;
-        font-weight: 400px;
-        line-height: 30px;
         color: rgba($color-black, 0.5);
     }
 
@@ -138,6 +145,7 @@ body {
 // === / Hero section === //
 
 // === Section2 === //
+
 .section-second {
     padding: 120px 150px 40px;
     background-color: $color-white;
@@ -217,6 +225,7 @@ body {
 // === / Section2 === //
 
 // === Practice === //
+
 .section-practice {
     padding-top: 70px;
     margin-top: 40px;
@@ -238,12 +247,10 @@ body {
 
     &__description {
         @include font-heebo;
+        @include font-description;
 
         width: 56%;
         margin: 0 auto;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 30px;
         color: rgba($color-black, 0.5);
     }
 
@@ -279,11 +286,9 @@ body {
 
             &__description {
                 @include font-heebo;
+                @include font-description;
 
                 padding-top: 10px;
-                font-size: 24px;
-                font-weight: 400;
-                line-height: 30px;
                 color: rgba($color-black, 0.5);
             }
 
@@ -309,6 +314,7 @@ body {
 // === / Practice === //
 
 // === Music === //
+
 .section-music {
     padding-top: 60px;
     text-align: center;
@@ -327,12 +333,10 @@ body {
 
     &__description {
         @include font-heebo;
+        @include font-description;
 
         width: 58%;
         margin: 0 auto;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 30px;
         color: rgba($color-black, 0.5);
     }
 
@@ -380,11 +384,9 @@ body {
 
         &__description {
             @include font-heebo;
+            @include font-description;
 
             margin: 0 auto;
-            font-size: 24px;
-            font-weight: 400;
-            line-height: 30px;
             color: rgba($color-black, 0.5);
         }
     }
@@ -397,6 +399,86 @@ body {
 // === / Music === //
 
 // === Best of meditation === //
+
+.section-best-of-meditation {
+    padding-top: 155px;
+    text-align: center;
+    background: url("../img/best-of-meditation-background.png");
+    background-size: 100% 100%;
+
+    &__title {
+        @include font-merienda-one;
+
+        margin: 0 auto 22px;
+        font-size: 54px;
+        font-weight: 400;
+        line-height: 70px;
+        color: $color-black;
+    }
+
+    &__description {
+        @include font-heebo;
+        @include font-description;
+
+        width: 58%;
+        margin: 0 auto;
+        color: rgba($color-black, 0.5);
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 70px 120px;
+    }
+
+    .benefits-list {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            width: 600px;
+            height: 200px;
+            padding: 25px 35px;
+            margin-bottom: 100px;
+
+            &.left {
+                align-items: end;
+                text-align: right;
+                background: url("../img/benefits-item-left-background.png");
+                background-size: 100% 100%;
+            }
+
+            &.right {
+                align-items: flex-start;
+                text-align: left;
+                background: url("../img/benefits-item-right-background.png");
+                background-size: 100% 100%;
+            }
+
+            &-title {
+                @include font-heebo;
+
+                margin-bottom: 10px;
+                font-size: 32px;
+                font-weight: 500;
+                line-height: 48px;
+                color: $color-black;
+            }
+
+            &-description {
+                @include font-heebo;
+                @include font-description;
+
+                width: 90%;
+                color: rgba($color-black, 0.5);
+            }
+        }
+    }
+}
 
 // === / Best of meditation === //
 
