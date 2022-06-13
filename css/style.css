@@ -1,3 +1,4 @@
+/* stylelint-disable no-missing-end-of-source-newline */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -806,4 +807,49 @@ body {
   line-height: 30px;
   margin-bottom: 30px;
   color: rgba(0, 0, 0, 0.5);
+}
+
+.section-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 135px;
+  padding-bottom: 40px;
+  background: url("../img/footer-background.png");
+  background-size: cover;
+}
+.section-footer__logo {
+  display: flex;
+  justify-content: center;
+}
+.section-footer nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.section-footer__nav {
+  margin: 30px 0;
+}
+.section-footer__nav-list {
+  font-family: Heebo, sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 40px;
+  color: #000;
+}
+.section-footer__nav-item {
+  padding-right: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.section-footer__nav-item:not(:last-child) {
+  border-right: 2px solid;
+}
+.section-footer__nav-socials {
+  display: flex;
+  justify-content: center;
+}
+.section-footer__nav-socials-item {
+  margin-right: 30px;
 }

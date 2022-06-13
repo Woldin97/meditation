@@ -1,3 +1,4 @@
+/* stylelint-disable no-missing-end-of-source-newline */
 @import "normalize";
 
 // === Mixins === //
@@ -590,5 +591,61 @@ body {
 // === / Transform your body === //
 
 // === Footer === //
+
+.section-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 135px;
+    padding-bottom: 40px;
+    background: url("../img/footer-background.png");
+    background-size: cover;
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav {
+        ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+    }
+
+    &__nav {
+        margin: 30px 0;
+
+        &-list {
+            @include font-heebo;
+
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 40px;
+            color: $color-black;
+        }
+
+        &-item {
+            padding-right: 20px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        &-item:not(:last-child) {
+            border-right: 2px solid;
+        }
+    }
+
+    &__nav-socials {
+        display: flex;
+        justify-content: center;
+
+        &-item {
+            margin-right: 30px;
+        }
+    }
+}
 
 // === / Footer === //
