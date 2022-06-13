@@ -349,6 +349,20 @@ body {
   margin: 0 auto;
 }
 
+.button-primary {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  width: 210px;
+  height: 55px;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(180deg, #259385 0%, #159685 100%);
+  border: 0;
+  border-radius: 30px;
+  box-shadow: 0 13px 28px rgba(26, 127, 114, 0.2);
+}
+
 .section-header {
   height: 130px;
   padding: 10px 150px;
@@ -711,5 +725,85 @@ body {
   font-weight: 400;
   line-height: 30px;
   width: 90%;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.section-transform-your-body {
+  padding-top: 68px;
+  text-align: center;
+  background: url("../img/transform-your-body-background.png");
+  background-size: cover;
+}
+.section-transform-your-body__title {
+  font-family: "Merienda One", cursive;
+  width: 35%;
+  margin: 0 auto 22px;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 70px;
+  color: #000;
+}
+.section-transform-your-body__description {
+  font-family: Heebo, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  width: 58%;
+  margin: 0 auto 70px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.section-transform-your-body .antistress-meditation {
+  display: flex;
+  margin: 0 200px;
+}
+.section-transform-your-body .antistress-meditation__content {
+  display: flex;
+  flex-direction: column;
+  padding: 120px 0;
+  margin-left: 198px;
+  text-align: left;
+}
+.section-transform-your-body .antistress-meditation__content--title {
+  font-family: Heebo, sans-serif;
+  margin-bottom: 18px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.section-transform-your-body .antistress-meditation__content--description {
+  font-family: Heebo, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 30px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.section-transform-your-body .backyark-band-meditation {
+  display: flex;
+  justify-content: center;
+  margin: 70px 200px;
+}
+.section-transform-your-body .backyark-band-meditation__content {
+  display: flex;
+  flex-direction: column;
+  padding: 95px 0;
+  margin-right: 135px;
+  text-align: left;
+}
+.section-transform-your-body .backyark-band-meditation__content--title {
+  font-family: Heebo, sans-serif;
+  margin-bottom: 18px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.section-transform-your-body .backyark-band-meditation__content--description {
+  font-family: Heebo, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 30px;
   color: rgba(0, 0, 0, 0.5);
 }

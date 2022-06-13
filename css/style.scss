@@ -38,6 +38,19 @@ body {
     margin: 0 auto;
 }
 
+.button-primary {
+    @include font-description;
+
+    width: 210px;
+    height: 55px;
+    color: $color-white;
+    cursor: pointer;
+    background: linear-gradient(180deg, #259385 0%, #159685 100%);
+    border: 0;
+    border-radius: 30px;
+    box-shadow: 0 13px 28px rgba(26, 127, 114, 0.2);
+}
+
 // === / Common === //
 
 // === Header === //
@@ -483,6 +496,96 @@ body {
 // === / Best of meditation === //
 
 // === Transform your body === //
+
+.section-transform-your-body {
+    padding-top: 68px;
+    text-align: center;
+    background: url("../img/transform-your-body-background.png");
+    background-size: cover;
+
+    &__title {
+        @include font-merienda-one;
+
+        width: 35%;
+        margin: 0 auto 22px;
+        font-size: 54px;
+        font-weight: 400;
+        line-height: 70px;
+        color: $color-black;
+    }
+
+    &__description {
+        @include font-heebo;
+        @include font-description;
+
+        width: 58%;
+        margin: 0 auto 70px;
+        color: rgba($color-black, 0.5);
+    }
+
+    .antistress-meditation {
+        display: flex;
+        margin: 0 200px;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            padding: 120px 0;
+            margin-left: 198px;
+            text-align: left;
+
+            &--title {
+                @include font-heebo;
+
+                margin-bottom: 18px;
+                font-size: 32px;
+                font-weight: 500;
+                line-height: 48px;
+                color: rgba($color-black, 0.8);
+            }
+
+            &--description {
+                @include font-heebo;
+                @include font-description;
+
+                margin-bottom: 30px;
+                color: rgba($color-black, 0.5);
+            }
+        }
+    }
+
+    .backyark-band-meditation {
+        display: flex;
+        justify-content: center;
+        margin: 70px 200px;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            padding: 95px 0;
+            margin-right: 135px;
+            text-align: left;
+
+            &--title {
+                @include font-heebo;
+
+                margin-bottom: 18px;
+                font-size: 32px;
+                font-weight: 500;
+                line-height: 48px;
+                color: rgba($color-black, 0.8);
+            }
+
+            &--description {
+                @include font-heebo;
+                @include font-description;
+
+                margin-bottom: 30px;
+                color: rgba($color-black, 0.5);
+            }
+        }
+    }
+}
 
 // === / Transform your body === //
 
