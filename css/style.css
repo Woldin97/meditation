@@ -398,6 +398,16 @@ body {
   color: #1a7f72;
   transition: 0.2s;
 }
+.section-header li a:hover::after {
+  position: absolute;
+  top: 12.5%;
+  width: 116px;
+  height: 10px;
+  margin-left: -5%;
+  content: "";
+  background: #1a7f72;
+  border-radius: 10px 10px 0 0;
+}
 
 .section-hero {
   padding-top: 70px;
