@@ -350,13 +350,19 @@ body {
   margin: 0 auto;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
 .button-primary {
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
+  color: #fff;
   width: 210px;
   height: 55px;
-  color: #fff;
   cursor: pointer;
   background: linear-gradient(180deg, #259385 0%, #159685 100%);
   border: 0;
@@ -380,9 +386,6 @@ body {
 }
 .section-header ul {
   display: flex;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
 }
 .section-header li {
   height: 130px;
@@ -431,13 +434,12 @@ body {
   color: #fff;
 }
 .section-hero__description {
-  font-family: Heebo, sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
+  color: rgba(0, 0, 0, 0.5);
   width: 55%;
   margin: 0 auto 30px;
-  color: rgba(0, 0, 0, 0.5);
 }
 .section-hero__button {
   margin: 0 auto 70px;
@@ -448,8 +450,8 @@ body {
   padding: 20px 90px;
   margin: 0;
   font-size: 30px;
-  font-weight: 700px;
-  line-height: 130%;
+  font-weight: 700;
+  line-height: 40px;
   color: #fff;
   text-align: center;
   cursor: pointer;
@@ -470,9 +472,6 @@ body {
 .section-second .cards-list {
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
 }
 .section-second .cards-item {
   width: 420px;
@@ -503,19 +502,6 @@ body {
   margin-top: 72px;
   margin-bottom: 96px;
 }
-.section-second .cards-item__button button {
-  width: 210px;
-  height: 55px;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 130%;
-  color: #fff;
-  cursor: pointer;
-  background: linear-gradient(180deg, #259385 0%, #159685 100%);
-  border: 0;
-  border-radius: 30px;
-  box-shadow: 0 13px 28px rgba(26, 117, 114, 0.2);
-}
 .section-second .cards-item.meditation {
   background: url("../img/recctangle_meditation.png");
   background-position: center;
@@ -539,21 +525,20 @@ body {
 }
 .section-practice__title {
   font-family: "Merienda One", cursive;
-  width: 40%;
   margin: 0 auto 22px;
   font-size: 54px;
   font-weight: 400;
   line-height: 70px;
   color: #000;
+  width: 40%;
 }
 .section-practice__description {
-  font-family: Heebo, sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
+  color: rgba(0, 0, 0, 0.5);
   width: 56%;
   margin: 0 auto;
-  color: rgba(0, 0, 0, 0.5);
 }
 .section-practice__content {
   display: flex;
@@ -561,11 +546,6 @@ body {
 }
 .section-practice__content-exercise {
   margin-left: 156px;
-}
-.section-practice__content .exercise-list {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
 }
 .section-practice__content .exercise-item {
   width: 718px;
@@ -575,19 +555,17 @@ body {
   cursor: pointer;
 }
 .section-practice__content .exercise-item__title {
-  font-family: Heebo, sans-serif;
   font-size: 32px;
   font-weight: 500;
   line-height: 48px;
   color: rgba(0, 0, 0, 0.8);
 }
 .section-practice__content .exercise-item__description {
-  font-family: Heebo, sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
-  padding-top: 10px;
   color: rgba(0, 0, 0, 0.5);
+  padding-top: 10px;
 }
 .section-practice__content .exercise-item__arrow {
   display: flex;
@@ -618,13 +596,12 @@ body {
   color: #000;
 }
 .section-music__description {
-  font-family: Heebo, sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
+  color: rgba(0, 0, 0, 0.5);
   width: 58%;
   margin: 0 auto;
-  color: rgba(0, 0, 0, 0.5);
 }
 .section-music__content {
   display: flex;
@@ -632,9 +609,7 @@ body {
   padding: 70px 150px 120px;
 }
 .section-music .music-list {
-  padding-top: 0;
   margin: 65px 0 0;
-  list-style-type: none;
 }
 .section-music .music-item {
   width: 650px;
@@ -656,19 +631,17 @@ body {
   padding: 0 80px;
 }
 .section-music .music-item__title {
-  font-family: Heebo, sans-serif;
   margin-bottom: 10px;
   font-size: 32px;
   font-weight: 500;
   line-height: 48px;
 }
 .section-music .music-item__description {
-  font-family: Heebo, sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
-  margin: 0 auto;
   color: rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
 }
 .section-music .button-play-music {
   cursor: pointer;
@@ -689,24 +662,18 @@ body {
   color: #000;
 }
 .section-best-of-meditation__description {
-  font-family: Heebo, sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
+  color: rgba(0, 0, 0, 0.5);
   width: 58%;
   margin: 0 auto;
-  color: rgba(0, 0, 0, 0.5);
 }
 .section-best-of-meditation__content {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   padding: 70px 120px;
-}
-.section-best-of-meditation .benefits-list {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
 }
 .section-best-of-meditation .benefits-list__item {
   display: flex;
@@ -729,7 +696,6 @@ body {
   background-size: 100% 100%;
 }
 .section-best-of-meditation .benefits-list__item-title {
-  font-family: Heebo, sans-serif;
   margin-bottom: 10px;
   font-size: 32px;
   font-weight: 500;
@@ -737,12 +703,11 @@ body {
   color: #000;
 }
 .section-best-of-meditation .benefits-list__item-description {
-  font-family: Heebo, sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
-  width: 90%;
   color: rgba(0, 0, 0, 0.5);
+  width: 90%;
 }
 
 .section-transform-your-body {
@@ -753,21 +718,20 @@ body {
 }
 .section-transform-your-body__title {
   font-family: "Merienda One", cursive;
-  width: 35%;
   margin: 0 auto 22px;
   font-size: 54px;
   font-weight: 400;
   line-height: 70px;
   color: #000;
+  width: 35%;
 }
 .section-transform-your-body__description {
-  font-family: Heebo, sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
+  color: rgba(0, 0, 0, 0.5);
   width: 58%;
   margin: 0 auto 70px;
-  color: rgba(0, 0, 0, 0.5);
 }
 .section-transform-your-body .antistress-meditation {
   display: flex;
@@ -781,7 +745,6 @@ body {
   text-align: left;
 }
 .section-transform-your-body .antistress-meditation__content--title {
-  font-family: Heebo, sans-serif;
   margin-bottom: 18px;
   font-size: 32px;
   font-weight: 500;
@@ -789,12 +752,11 @@ body {
   color: rgba(0, 0, 0, 0.8);
 }
 .section-transform-your-body .antistress-meditation__content--description {
-  font-family: Heebo, sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
-  margin-bottom: 30px;
   color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
 }
 .section-transform-your-body .backyark-band-meditation {
   display: flex;
@@ -809,7 +771,6 @@ body {
   text-align: left;
 }
 .section-transform-your-body .backyark-band-meditation__content--title {
-  font-family: Heebo, sans-serif;
   margin-bottom: 18px;
   font-size: 32px;
   font-weight: 500;
@@ -817,12 +778,11 @@ body {
   color: rgba(0, 0, 0, 0.8);
 }
 .section-transform-your-body .backyark-band-meditation__content--description {
-  font-family: Heebo, sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
-  margin-bottom: 30px;
   color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
 }
 
 .section-footer {
@@ -840,15 +800,11 @@ body {
 }
 .section-footer nav ul {
   display: flex;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
 }
 .section-footer__nav {
   margin: 30px 0;
 }
 .section-footer__nav-list {
-  font-family: Heebo, sans-serif;
   font-size: 28px;
   font-weight: 400;
   line-height: 40px;

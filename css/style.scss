@@ -11,10 +11,21 @@
     font-family: "Merienda One", cursive;
 }
 
-@mixin font-description {
+@mixin font-section-title {
+    @include font-merienda-one;
+
+    margin: 0 auto 22px;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 70px;
+    color: $color-black;
+}
+
+@mixin font-description($font-color: rgba($color-black, 0.5)) {
     font-size: 24px;
     font-weight: 400;
     line-height: 30px;
+    color: $font-color;
 }
 
 // === / Mixins === //
@@ -39,12 +50,17 @@ body {
     margin: 0 auto;
 }
 
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
 .button-primary {
-    @include font-description;
+    @include font-description($font-color: $color-white);
 
     width: 210px;
     height: 55px;
-    color: $color-white;
     cursor: pointer;
     background: linear-gradient(180deg, #259385 0%, #159685 100%);
     border: 0;
@@ -74,9 +90,6 @@ body {
 
     ul {
         display: flex;
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
     }
 
     li {
@@ -136,12 +149,10 @@ body {
     }
 
     &__description {
-        @include font-heebo;
         @include font-description;
 
         width: 55%;
         margin: 0 auto 30px;
-        color: rgba($color-black, 0.5);
     }
 
     &__button {
@@ -153,8 +164,8 @@ body {
             padding: 20px 90px;
             margin: 0;
             font-size: 30px;
-            font-weight: 700px;
-            line-height: 130%;
+            font-weight: 700;
+            line-height: 40px;
             color: $color-white;
             text-align: center;
             cursor: pointer;
@@ -184,9 +195,6 @@ body {
     .cards-list {
         display: flex;
         flex-wrap: wrap;
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
     }
 
     .cards-item {
@@ -220,20 +228,6 @@ body {
         &__button {
             margin-top: 72px;
             margin-bottom: 96px;
-
-            button {
-                width: 210px;
-                height: 55px;
-                font-size: 24px;
-                font-weight: 400;
-                line-height: 130%;
-                color: $color-white;
-                cursor: pointer;
-                background: linear-gradient(180deg, #259385 0%, #159685 100%);
-                border: 0;
-                border-radius: 30px;
-                box-shadow: 0 13px 28px rgba(26, 117, 114, 0.2);
-            }
         }
 
         &.meditation {
@@ -266,23 +260,16 @@ body {
     background-position: right;
 
     &__title {
-        @include font-merienda-one;
+        @include font-section-title;
 
         width: 40%;
-        margin: 0 auto 22px;
-        font-size: 54px;
-        font-weight: 400;
-        line-height: 70px;
-        color: $color-black;
     }
 
     &__description {
-        @include font-heebo;
         @include font-description;
 
         width: 56%;
         margin: 0 auto;
-        color: rgba($color-black, 0.5);
     }
 
     &__content {
@@ -293,12 +280,6 @@ body {
             margin-left: 156px;
         }
 
-        .exercise-list {
-            padding: 0;
-            margin: 0;
-            list-style-type: none;
-        }
-
         .exercise-item {
             width: 718px;
             height: 234px;
@@ -307,8 +288,6 @@ body {
             cursor: pointer;
 
             &__title {
-                @include font-heebo;
-
                 font-size: 32px;
                 font-weight: 500;
                 line-height: 48px;
@@ -316,11 +295,9 @@ body {
             }
 
             &__description {
-                @include font-heebo;
                 @include font-description;
 
                 padding-top: 10px;
-                color: rgba($color-black, 0.5);
             }
 
             &__arrow {
@@ -353,22 +330,14 @@ body {
     background-size: cover;
 
     &__title {
-        @include font-merienda-one;
-
-        margin: 0 auto 22px;
-        font-size: 54px;
-        font-weight: 400;
-        line-height: 70px;
-        color: $color-black;
+        @include font-section-title;
     }
 
     &__description {
-        @include font-heebo;
         @include font-description;
 
         width: 58%;
         margin: 0 auto;
-        color: rgba($color-black, 0.5);
     }
 
     &__content {
@@ -378,9 +347,7 @@ body {
     }
 
     .music-list {
-        padding-top: 0;
         margin: 65px 0 0;
-        list-style-type: none;
     }
 
     .music-item {
@@ -405,8 +372,6 @@ body {
         }
 
         &__title {
-            @include font-heebo;
-
             margin-bottom: 10px;
             font-size: 32px;
             font-weight: 500;
@@ -414,11 +379,9 @@ body {
         }
 
         &__description {
-            @include font-heebo;
             @include font-description;
 
             margin: 0 auto;
-            color: rgba($color-black, 0.5);
         }
     }
 
@@ -438,22 +401,14 @@ body {
     background-size: 100% 100%;
 
     &__title {
-        @include font-merienda-one;
-
-        margin: 0 auto 22px;
-        font-size: 54px;
-        font-weight: 400;
-        line-height: 70px;
-        color: $color-black;
+        @include font-section-title;
     }
 
     &__description {
-        @include font-heebo;
         @include font-description;
 
         width: 58%;
         margin: 0 auto;
-        color: rgba($color-black, 0.5);
     }
 
     &__content {
@@ -464,10 +419,6 @@ body {
     }
 
     .benefits-list {
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-
         &__item {
             display: flex;
             flex-direction: column;
@@ -491,8 +442,6 @@ body {
             }
 
             &-title {
-                @include font-heebo;
-
                 margin-bottom: 10px;
                 font-size: 32px;
                 font-weight: 500;
@@ -501,11 +450,9 @@ body {
             }
 
             &-description {
-                @include font-heebo;
                 @include font-description;
 
                 width: 90%;
-                color: rgba($color-black, 0.5);
             }
         }
     }
@@ -522,23 +469,16 @@ body {
     background-size: cover;
 
     &__title {
-        @include font-merienda-one;
+        @include font-section-title;
 
         width: 35%;
-        margin: 0 auto 22px;
-        font-size: 54px;
-        font-weight: 400;
-        line-height: 70px;
-        color: $color-black;
     }
 
     &__description {
-        @include font-heebo;
         @include font-description;
 
         width: 58%;
         margin: 0 auto 70px;
-        color: rgba($color-black, 0.5);
     }
 
     .antistress-meditation {
@@ -553,8 +493,6 @@ body {
             text-align: left;
 
             &--title {
-                @include font-heebo;
-
                 margin-bottom: 18px;
                 font-size: 32px;
                 font-weight: 500;
@@ -563,11 +501,9 @@ body {
             }
 
             &--description {
-                @include font-heebo;
                 @include font-description;
 
                 margin-bottom: 30px;
-                color: rgba($color-black, 0.5);
             }
         }
     }
@@ -585,8 +521,6 @@ body {
             text-align: left;
 
             &--title {
-                @include font-heebo;
-
                 margin-bottom: 18px;
                 font-size: 32px;
                 font-weight: 500;
@@ -595,11 +529,9 @@ body {
             }
 
             &--description {
-                @include font-heebo;
                 @include font-description;
 
                 margin-bottom: 30px;
-                color: rgba($color-black, 0.5);
             }
         }
     }
@@ -626,9 +558,6 @@ body {
     nav {
         ul {
             display: flex;
-            padding: 0;
-            margin: 0;
-            list-style-type: none;
         }
     }
 
@@ -636,8 +565,6 @@ body {
         margin: 30px 0;
 
         &-list {
-            @include font-heebo;
-
             font-size: 28px;
             font-weight: 400;
             line-height: 40px;
