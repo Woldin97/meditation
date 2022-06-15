@@ -156,24 +156,20 @@ ul {
     }
 
     &__button {
+        width: 300px;
+        height: 75px;
+        padding: 20px 90px;
         margin: 0 auto 70px;
-
-        button {
-            width: 300px;
-            height: 75px;
-            padding: 20px 90px;
-            margin: 0;
-            font-size: 30px;
-            font-weight: 700;
-            line-height: 40px;
-            color: $color-white;
-            text-align: center;
-            cursor: pointer;
-            background: linear-gradient(#259385, #159685);
-            border: 0;
-            border-radius: 50px;
-            box-shadow: 0 20px 40px 0 rgba(21, 113, 101, 0.2);
-        }
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 40px;
+        color: $color-white;
+        text-align: center;
+        cursor: pointer;
+        background: linear-gradient(#259385, #159685);
+        border: 0;
+        border-radius: 50px;
+        box-shadow: 0 20px 40px 0 rgba(21, 113, 101, 0.2);
     }
 
     &__content {
@@ -195,54 +191,54 @@ ul {
     .cards-list {
         display: flex;
         flex-wrap: wrap;
-    }
 
-    .cards-item {
-        width: 420px;
-        height: 540px;
-        padding-top: 50px;
-        margin-top: 110px;
-        margin-right: 110px;
-        text-align: center;
-        border-radius: 20px;
-        box-shadow: 0 20px 50px rgba(26, 127, 114, 0.15);
+        .cards-item {
+            width: 420px;
+            height: 540px;
+            padding-top: 50px;
+            margin-top: 110px;
+            margin-right: 110px;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(26, 127, 114, 0.15);
 
-        &__icon {
-            margin-bottom: 20px;
-        }
+            &__icon {
+                margin-bottom: 20px;
+            }
 
-        &__title {
-            margin-bottom: 20px;
-            font-size: 32px;
-            font-weight: 500px;
-            line-height: 48px;
-        }
+            &__title {
+                margin-bottom: 20px;
+                font-size: 32px;
+                font-weight: 500px;
+                line-height: 48px;
+            }
 
-        &__description {
-            margin: 0 48px;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 24px;
-        }
+            &__description {
+                margin: 0 48px;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 24px;
+            }
 
-        &__button {
-            margin-top: 72px;
-            margin-bottom: 96px;
-        }
+            &__button {
+                margin-top: 72px;
+                margin-bottom: 96px;
+            }
 
-        &.meditation {
-            background: url("../img/recctangle_meditation.png");
-            background-position: center;
-        }
+            &.meditation {
+                background: url("../img/recctangle_meditation.png");
+                background-position: center;
+            }
 
-        &.yoga {
-            background: url("../img/recctangle_yoga.png");
-            background-position: center;
-        }
+            &.yoga {
+                background: url("../img/recctangle_yoga.png");
+                background-position: center;
+            }
 
-        &.sound {
-            background: url("../img/recctangle_sound.png");
-            background-position: center;
+            &.sound {
+                background: url("../img/recctangle_sound.png");
+                background-position: center;
+            }
         }
     }
 }
@@ -313,7 +309,8 @@ ul {
             }
         }
 
-        .exercise-item:hover &__arrow {
+        /* stylelint-disable-next-line selector-class-pattern */
+        .exercise-item:hover .exercise-item__arrow {
             visibility: visible;
         }
     }

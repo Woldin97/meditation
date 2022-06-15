@@ -442,13 +442,10 @@ ul {
   margin: 0 auto 30px;
 }
 .section-hero__button {
-  margin: 0 auto 70px;
-}
-.section-hero__button button {
   width: 300px;
   height: 75px;
   padding: 20px 90px;
-  margin: 0;
+  margin: 0 auto 70px;
   font-size: 30px;
   font-weight: 700;
   line-height: 40px;
@@ -473,7 +470,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
 }
-.section-second .cards-item {
+.section-second .cards-list .cards-item {
   width: 420px;
   height: 540px;
   padding-top: 50px;
@@ -483,34 +480,34 @@ ul {
   border-radius: 20px;
   box-shadow: 0 20px 50px rgba(26, 127, 114, 0.15);
 }
-.section-second .cards-item__icon {
+.section-second .cards-list .cards-item__icon {
   margin-bottom: 20px;
 }
-.section-second .cards-item__title {
+.section-second .cards-list .cards-item__title {
   margin-bottom: 20px;
   font-size: 32px;
   font-weight: 500px;
   line-height: 48px;
 }
-.section-second .cards-item__description {
+.section-second .cards-list .cards-item__description {
   margin: 0 48px;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
 }
-.section-second .cards-item__button {
+.section-second .cards-list .cards-item__button {
   margin-top: 72px;
   margin-bottom: 96px;
 }
-.section-second .cards-item.meditation {
+.section-second .cards-list .cards-item.meditation {
   background: url("../img/recctangle_meditation.png");
   background-position: center;
 }
-.section-second .cards-item.yoga {
+.section-second .cards-list .cards-item.yoga {
   background: url("../img/recctangle_yoga.png");
   background-position: center;
 }
-.section-second .cards-item.sound {
+.section-second .cards-list .cards-item.sound {
   background: url("../img/recctangle_sound.png");
   background-position: center;
 }
@@ -543,6 +540,7 @@ ul {
 .section-practice__content {
   display: flex;
   padding: 70px 150px 120px;
+  /* stylelint-disable-next-line selector-class-pattern */
 }
 .section-practice__content-exercise {
   margin-left: 156px;
@@ -577,7 +575,7 @@ ul {
   background-position: center;
   box-shadow: 0 8px 50px rgba(26, 127, 114, 0.2);
 }
-.exercise-item:hover .section-practice__content__arrow {
+.section-practice__content .exercise-item:hover .exercise-item__arrow {
   visibility: visible;
 }
 
