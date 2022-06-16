@@ -356,6 +356,19 @@ ul {
   list-style-type: none;
 }
 
+a {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 40px;
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1a7f72;
+  transition: 0.2s;
+}
+
 .button-primary {
   font-size: 24px;
   font-weight: 400;
@@ -372,13 +385,12 @@ ul {
 
 .section-header {
   height: 100%;
-  padding: 0 150px;
   background-color: #fff;
 }
 .section-header .section-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .section-header img {
   width: 150px;
@@ -390,9 +402,6 @@ ul {
 .section-header li {
   height: 130px;
   padding-right: 75px;
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 40px;
 }
 .section-header li a {
   position: relative;
@@ -401,10 +410,6 @@ ul {
   height: 100%;
   color: #000;
   text-decoration: none;
-}
-.section-header li a:hover {
-  color: #1a7f72;
-  transition: 0.2s;
 }
 .section-header li a:hover::after {
   position: absolute;
@@ -463,19 +468,17 @@ ul {
 }
 
 .section-second {
-  padding: 120px 150px 40px;
+  padding: 120px 0 40px;
   background-color: #fff;
 }
 .section-second .cards-list {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .section-second .cards-list .cards-item {
   width: 420px;
   height: 540px;
   padding-top: 50px;
-  margin-top: 110px;
-  margin-right: 110px;
   text-align: center;
   border-radius: 20px;
   box-shadow: 0 20px 50px rgba(26, 127, 114, 0.15);
@@ -499,17 +502,16 @@ ul {
   margin-top: 72px;
   margin-bottom: 96px;
 }
-.section-second .cards-list .cards-item.meditation {
-  background: url("../img/recctangle_meditation.png");
-  background-position: center;
+@media (max-width: 1399px) {
+  .section-second .cards-list .cards-item {
+    margin-bottom: 90px;
+  }
 }
-.section-second .cards-list .cards-item.yoga {
-  background: url("../img/recctangle_yoga.png");
-  background-position: center;
-}
-.section-second .cards-list .cards-item.sound {
-  background: url("../img/recctangle_sound.png");
-  background-position: center;
+@media (max-width: 1399px) {
+  .section-second .cards-list {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .section-practice {
@@ -571,12 +573,18 @@ ul {
   visibility: hidden;
 }
 .section-practice__content .exercise-item:hover {
-  background: url("../img/rectangle-exercise-meditation.png");
-  background-position: center;
+  background: #fff;
+  border-radius: 20px;
   box-shadow: 0 8px 50px rgba(26, 127, 114, 0.2);
 }
 .section-practice__content .exercise-item:hover .exercise-item__arrow {
   visibility: visible;
+}
+@media (max-width: 1399px) {
+  .section-practice__content {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .section-music {
@@ -606,8 +614,19 @@ ul {
   justify-content: space-between;
   padding: 70px 150px 120px;
 }
+@media (max-width: 1399px) {
+  .section-music__content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .section-music .music-list {
   margin: 65px 0 0;
+}
+@media (max-width: 1399px) {
+  .section-music .music-list {
+    order: 1;
+  }
 }
 .section-music .music-item {
   width: 650px;
@@ -649,6 +668,7 @@ ul {
   padding-top: 155px;
   text-align: center;
   background: url("../img/best-of-meditation-background.png");
+  background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 .section-best-of-meditation__title {
@@ -672,6 +692,12 @@ ul {
   align-items: flex-start;
   justify-content: space-between;
   padding: 70px 120px;
+}
+@media (max-width: 1399px) {
+  .section-best-of-meditation__content {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .section-best-of-meditation .benefits-list__item {
   display: flex;
@@ -756,6 +782,12 @@ ul {
   color: rgba(0, 0, 0, 0.5);
   margin-bottom: 30px;
 }
+@media (max-width: 1399px) {
+  .section-transform-your-body .antistress-meditation {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .section-transform-your-body .backyark-band-meditation {
   display: flex;
   justify-content: center;
@@ -781,6 +813,12 @@ ul {
   line-height: 30px;
   color: rgba(0, 0, 0, 0.5);
   margin-bottom: 30px;
+}
+@media (max-width: 1399px) {
+  .section-transform-your-body .backyark-band-meditation {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .section-footer {
@@ -822,4 +860,5 @@ ul {
 }
 .section-footer__nav-socials-item {
   margin-right: 30px;
+  cursor: pointer;
 }

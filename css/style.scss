@@ -34,6 +34,16 @@
 
 $color-white: #fff;
 $color-black: #000;
+$color-link: #1a7f72;
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+$screen-xxl-min: 1400px;
+$screen-sm-max: 767px;
+$screen-md-max: 991px;
+$screen-lg-max: 1199px;
+$screen-xl-max: 1399px;
 
 // === / Variables === //
 
@@ -56,6 +66,19 @@ ul {
     list-style-type: none;
 }
 
+a {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 40px;
+    color: $color-black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $color-link;
+    transition: 0.2s;
+}
+
 .button-primary {
     @include font-description($font-color: $color-white);
 
@@ -74,13 +97,12 @@ ul {
 
 .section-header {
     height: 100%;
-    padding: 0 150px;
     background-color: $color-white;
 
     .section-inner {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     img {
@@ -95,9 +117,6 @@ ul {
     li {
         height: 130px;
         padding-right: 75px;
-        font-size: 28px;
-        font-weight: 400;
-        line-height: 40px;
 
         a {
             position: relative;
@@ -108,11 +127,6 @@ ul {
             text-decoration: none;
         }
 
-        a:hover {
-            color: #1a7f72;
-            transition: 0.2s;
-        }
-
         a:hover::after {
             position: absolute;
             bottom: 0;
@@ -121,7 +135,7 @@ ul {
             width: 100%;
             height: 10px;
             content: "";
-            background: #1a7f72;
+            background: $color-link;
             border-radius: 10px 10px 0 0;
         }
     }
@@ -185,19 +199,17 @@ ul {
 // === Section2 === //
 
 .section-second {
-    padding: 120px 150px 40px;
+    padding: 120px 0 40px;
     background-color: $color-white;
 
     .cards-list {
         display: flex;
-        flex-wrap: wrap;
+        justify-content: space-between;
 
         .cards-item {
             width: 420px;
             height: 540px;
             padding-top: 50px;
-            margin-top: 110px;
-            margin-right: 110px;
             text-align: center;
             border-radius: 20px;
             box-shadow: 0 20px 50px rgba(26, 127, 114, 0.15);
@@ -225,20 +237,14 @@ ul {
                 margin-bottom: 96px;
             }
 
-            &.meditation {
-                background: url("../img/recctangle_meditation.png");
-                background-position: center;
+            @media (max-width: $screen-xl-max) {
+                margin-bottom: 90px;
             }
+        }
 
-            &.yoga {
-                background: url("../img/recctangle_yoga.png");
-                background-position: center;
-            }
-
-            &.sound {
-                background: url("../img/recctangle_sound.png");
-                background-position: center;
-            }
+        @media (max-width: $screen-xl-max) {
+            flex-direction: column;
+            align-items: center;
         }
     }
 }
@@ -303,8 +309,8 @@ ul {
             }
 
             &:hover {
-                background: url("../img/rectangle-exercise-meditation.png");
-                background-position: center;
+                background: $color-white;
+                border-radius: 20px;
                 box-shadow: 0 8px 50px rgba(26, 127, 114, 0.2);
             }
         }
@@ -312,6 +318,11 @@ ul {
         /* stylelint-disable-next-line selector-class-pattern */
         .exercise-item:hover .exercise-item__arrow {
             visibility: visible;
+        }
+
+        @media (max-width: $screen-xl-max) {
+            flex-direction: column;
+            align-items: center;
         }
     }
 }
@@ -341,10 +352,19 @@ ul {
         display: flex;
         justify-content: space-between;
         padding: 70px 150px 120px;
+
+        @media (max-width: $screen-xl-max) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     .music-list {
         margin: 65px 0 0;
+
+        @media (max-width: $screen-xl-max) {
+            order: 1;
+        }
     }
 
     .music-item {
@@ -395,6 +415,7 @@ ul {
     padding-top: 155px;
     text-align: center;
     background: url("../img/best-of-meditation-background.png");
+    background-repeat: no-repeat;
     background-size: 100% 100%;
 
     &__title {
@@ -413,6 +434,11 @@ ul {
         align-items: flex-start;
         justify-content: space-between;
         padding: 70px 120px;
+
+        @media (max-width: $screen-xl-max) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     .benefits-list {
@@ -503,6 +529,11 @@ ul {
                 margin-bottom: 30px;
             }
         }
+
+        @media (max-width: $screen-xl-max) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     .backyark-band-meditation {
@@ -530,6 +561,11 @@ ul {
 
                 margin-bottom: 30px;
             }
+        }
+
+        @media (max-width: $screen-xl-max) {
+            flex-direction: column;
+            align-items: center;
         }
     }
 }
@@ -585,6 +621,7 @@ ul {
 
         &-item {
             margin-right: 30px;
+            cursor: pointer;
         }
     }
 }
