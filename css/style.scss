@@ -106,8 +106,10 @@ a:hover {
     }
 
     img {
-        width: 150px;
-        height: 120px;
+        width: 100%;
+        max-width: 150px;
+        height: 100%;
+        max-height: 120px;
     }
 
     ul {
@@ -123,8 +125,6 @@ a:hover {
             display: flex;
             align-items: center;
             height: 100%;
-            color: $color-black;
-            text-decoration: none;
         }
 
         a:hover::after {
@@ -149,15 +149,16 @@ a:hover {
     padding-top: 70px;
     text-align: center;
     background: url("../img/background-hero.png");
-    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
     &__title {
         @include font-merienda-one;
 
-        width: 45%;
         margin: 0 auto 22px;
         font-size: 68px;
-        font-weight: 400px;
+        font-weight: 400;
         line-height: 88px;
         color: $color-white;
     }
@@ -165,7 +166,6 @@ a:hover {
     &__description {
         @include font-description;
 
-        width: 55%;
         margin: 0 auto 30px;
     }
 
@@ -188,8 +188,30 @@ a:hover {
 
     &__content {
         img {
-            width: 590px;
-            height: 560px;
+            width: 100%;
+            max-width: 590px;
+            height: 100%;
+            max-height: 560px;
+        }
+    }
+
+    @media (min-width: $screen-xxl-min) {
+        &__title {
+            width: 45%;
+        }
+
+        &__description {
+            width: 55%;
+        }
+    }
+
+    @media (max-width: $screen-xl-max) {
+        &__title {
+            width: 70%;
+        }
+
+        &__description {
+            width: 80%;
         }
     }
 }
@@ -263,14 +285,11 @@ a:hover {
 
     &__title {
         @include font-section-title;
-
-        width: 40%;
     }
 
     &__description {
         @include font-description;
 
-        width: 56%;
         margin: 0 auto;
     }
 
@@ -325,6 +344,26 @@ a:hover {
             align-items: center;
         }
     }
+
+    @media (min-width: $screen-xxl-min) {
+        &__title {
+            width: 40%;
+        }
+
+        &__description {
+            width: 55%;
+        }
+    }
+
+    @media (max-width: $screen-xl-max) {
+        &__title {
+            width: 60%;
+        }
+
+        &__description {
+            width: 80%;
+        }
+    }
 }
 
 // === / Practice === //
@@ -335,7 +374,8 @@ a:hover {
     padding-top: 60px;
     text-align: center;
     background: url("../img/background-music.png");
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
 
     &__title {
         @include font-section-title;
@@ -344,7 +384,7 @@ a:hover {
     &__description {
         @include font-description;
 
-        width: 58%;
+        width: 60%;
         margin: 0 auto;
     }
 
@@ -416,7 +456,6 @@ a:hover {
     text-align: center;
     background: url("../img/best-of-meditation-background.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
 
     &__title {
         @include font-section-title;
@@ -425,19 +464,29 @@ a:hover {
     &__description {
         @include font-description;
 
-        width: 58%;
+        width: 60%;
         margin: 0 auto;
     }
 
     &__content {
         display: flex;
-        align-items: flex-start;
         justify-content: space-between;
         padding: 70px 120px;
+
+        &--image {
+            width: 100%;
+            max-width: 340px;
+            height: 100%;
+            max-height: 800px;
+        }
 
         @media (max-width: $screen-xl-max) {
             flex-direction: column;
             align-items: center;
+
+            &--image {
+                margin-bottom: 100px;
+            }
         }
     }
 
@@ -449,6 +498,7 @@ a:hover {
             height: 200px;
             padding: 25px 35px;
             margin-bottom: 100px;
+            cursor: pointer;
 
             &.left {
                 align-items: end;
@@ -479,6 +529,17 @@ a:hover {
             }
         }
     }
+
+    @media (min-width: $screen-xxl-min) {
+        background-position: center center;
+        background-size: cover;
+    }
+
+    @media (max-width: $screen-xl-max) {
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+    }
 }
 
 // === / Best of meditation === //
@@ -489,18 +550,16 @@ a:hover {
     padding-top: 68px;
     text-align: center;
     background: url("../img/transform-your-body-background.png");
-    background-size: cover;
+    background-repeat: no-repeat;
 
     &__title {
         @include font-section-title;
-
-        width: 35%;
     }
 
     &__description {
         @include font-description;
 
-        width: 58%;
+        width: 60%;
         margin: 0 auto 70px;
     }
 
@@ -566,6 +625,24 @@ a:hover {
         @media (max-width: $screen-xl-max) {
             flex-direction: column;
             align-items: center;
+        }
+    }
+
+    @media (min-width: $screen-xxl-min) {
+        background-size: 100% 100%;
+
+        &__title {
+            width: 35%;
+        }
+    }
+
+    @media (max-width: $screen-xl-max) {
+        flex-direction: column;
+        align-items: center;
+        background-size: contain;
+
+        &__title {
+            width: 55%;
         }
     }
 }

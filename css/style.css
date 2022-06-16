@@ -393,8 +393,10 @@ a:hover {
   justify-content: space-around;
 }
 .section-header img {
-  width: 150px;
-  height: 120px;
+  width: 100%;
+  max-width: 150px;
+  height: 100%;
+  max-height: 120px;
 }
 .section-header ul {
   display: flex;
@@ -408,8 +410,6 @@ a:hover {
   display: flex;
   align-items: center;
   height: 100%;
-  color: #000;
-  text-decoration: none;
 }
 .section-header li a:hover::after {
   position: absolute;
@@ -427,14 +427,15 @@ a:hover {
   padding-top: 70px;
   text-align: center;
   background: url("../img/background-hero.png");
-  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .section-hero__title {
   font-family: "Merienda One", cursive;
-  width: 45%;
   margin: 0 auto 22px;
   font-size: 68px;
-  font-weight: 400px;
+  font-weight: 400;
   line-height: 88px;
   color: #fff;
 }
@@ -443,7 +444,6 @@ a:hover {
   font-weight: 400;
   line-height: 30px;
   color: rgba(0, 0, 0, 0.5);
-  width: 55%;
   margin: 0 auto 30px;
 }
 .section-hero__button {
@@ -463,8 +463,26 @@ a:hover {
   box-shadow: 0 20px 40px 0 rgba(21, 113, 101, 0.2);
 }
 .section-hero__content img {
-  width: 590px;
-  height: 560px;
+  width: 100%;
+  max-width: 590px;
+  height: 100%;
+  max-height: 560px;
+}
+@media (min-width: 1400px) {
+  .section-hero__title {
+    width: 45%;
+  }
+  .section-hero__description {
+    width: 55%;
+  }
+}
+@media (max-width: 1399px) {
+  .section-hero__title {
+    width: 70%;
+  }
+  .section-hero__description {
+    width: 80%;
+  }
 }
 
 .section-second {
@@ -529,14 +547,12 @@ a:hover {
   font-weight: 400;
   line-height: 70px;
   color: #000;
-  width: 40%;
 }
 .section-practice__description {
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
   color: rgba(0, 0, 0, 0.5);
-  width: 56%;
   margin: 0 auto;
 }
 .section-practice__content {
@@ -586,12 +602,29 @@ a:hover {
     align-items: center;
   }
 }
+@media (min-width: 1400px) {
+  .section-practice__title {
+    width: 40%;
+  }
+  .section-practice__description {
+    width: 55%;
+  }
+}
+@media (max-width: 1399px) {
+  .section-practice__title {
+    width: 60%;
+  }
+  .section-practice__description {
+    width: 80%;
+  }
+}
 
 .section-music {
   padding-top: 60px;
   text-align: center;
   background: url("../img/background-music.png");
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .section-music__title {
   font-family: "Merienda One", cursive;
@@ -606,7 +639,7 @@ a:hover {
   font-weight: 400;
   line-height: 30px;
   color: rgba(0, 0, 0, 0.5);
-  width: 58%;
+  width: 60%;
   margin: 0 auto;
 }
 .section-music__content {
@@ -669,7 +702,6 @@ a:hover {
   text-align: center;
   background: url("../img/best-of-meditation-background.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
 }
 .section-best-of-meditation__title {
   font-family: "Merienda One", cursive;
@@ -684,19 +716,27 @@ a:hover {
   font-weight: 400;
   line-height: 30px;
   color: rgba(0, 0, 0, 0.5);
-  width: 58%;
+  width: 60%;
   margin: 0 auto;
 }
 .section-best-of-meditation__content {
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
   padding: 70px 120px;
+}
+.section-best-of-meditation__content--image {
+  width: 100%;
+  max-width: 340px;
+  height: 100%;
+  max-height: 800px;
 }
 @media (max-width: 1399px) {
   .section-best-of-meditation__content {
     flex-direction: column;
     align-items: center;
+  }
+  .section-best-of-meditation__content--image {
+    margin-bottom: 100px;
   }
 }
 .section-best-of-meditation .benefits-list__item {
@@ -706,6 +746,7 @@ a:hover {
   height: 200px;
   padding: 25px 35px;
   margin-bottom: 100px;
+  cursor: pointer;
 }
 .section-best-of-meditation .benefits-list__item.left {
   align-items: end;
@@ -733,12 +774,25 @@ a:hover {
   color: rgba(0, 0, 0, 0.5);
   width: 90%;
 }
+@media (min-width: 1400px) {
+  .section-best-of-meditation {
+    background-position: center center;
+    background-size: cover;
+  }
+}
+@media (max-width: 1399px) {
+  .section-best-of-meditation {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+}
 
 .section-transform-your-body {
   padding-top: 68px;
   text-align: center;
   background: url("../img/transform-your-body-background.png");
-  background-size: cover;
+  background-repeat: no-repeat;
 }
 .section-transform-your-body__title {
   font-family: "Merienda One", cursive;
@@ -747,14 +801,13 @@ a:hover {
   font-weight: 400;
   line-height: 70px;
   color: #000;
-  width: 35%;
 }
 .section-transform-your-body__description {
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
   color: rgba(0, 0, 0, 0.5);
-  width: 58%;
+  width: 60%;
   margin: 0 auto 70px;
 }
 .section-transform-your-body .antistress-meditation {
@@ -818,6 +871,24 @@ a:hover {
   .section-transform-your-body .backyark-band-meditation {
     flex-direction: column;
     align-items: center;
+  }
+}
+@media (min-width: 1400px) {
+  .section-transform-your-body {
+    background-size: 100% 100%;
+  }
+  .section-transform-your-body__title {
+    width: 35%;
+  }
+}
+@media (max-width: 1399px) {
+  .section-transform-your-body {
+    flex-direction: column;
+    align-items: center;
+    background-size: contain;
+  }
+  .section-transform-your-body__title {
+    width: 55%;
   }
 }
 
