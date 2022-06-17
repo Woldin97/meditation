@@ -383,6 +383,11 @@ a:hover {
   box-shadow: 0 13px 28px rgba(26, 127, 114, 0.2);
 }
 
+.button-primary:hover {
+  background: linear-gradient(180deg, #01c3a9 0%, #23a291 100%);
+  transition: 0.2s;
+}
+
 .section-header {
   height: 100%;
   background-color: #fff;
@@ -461,6 +466,9 @@ a:hover {
   border: 0;
   border-radius: 50px;
   box-shadow: 0 20px 40px 0 rgba(21, 113, 101, 0.2);
+}
+.section-hero__button:hover {
+  background: linear-gradient(#016a5a, #016a5a);
 }
 .section-hero__content img {
   width: 100%;
@@ -702,6 +710,7 @@ a:hover {
   text-align: center;
   background: url("../img/best-of-meditation-background.png");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .section-best-of-meditation__title {
   font-family: "Merienda One", cursive;
@@ -722,7 +731,6 @@ a:hover {
 .section-best-of-meditation__content {
   display: flex;
   justify-content: space-between;
-  padding: 70px 120px;
 }
 .section-best-of-meditation__content--image {
   width: 100%;
@@ -730,13 +738,17 @@ a:hover {
   height: 100%;
   max-height: 800px;
 }
+@media (min-width: 1400px) {
+  .section-best-of-meditation__content {
+    padding: 70px 120px;
+  }
+}
 @media (max-width: 1399px) {
   .section-best-of-meditation__content {
-    flex-direction: column;
-    align-items: center;
+    padding: 70px 20px;
   }
   .section-best-of-meditation__content--image {
-    margin-bottom: 100px;
+    display: none;
   }
 }
 .section-best-of-meditation .benefits-list__item {
@@ -774,17 +786,9 @@ a:hover {
   color: rgba(0, 0, 0, 0.5);
   width: 90%;
 }
-@media (min-width: 1400px) {
-  .section-best-of-meditation {
-    background-position: center center;
-    background-size: cover;
-  }
-}
 @media (max-width: 1399px) {
   .section-best-of-meditation {
-    background-attachment: fixed;
     background-position: center;
-    background-size: cover;
   }
 }
 
@@ -904,6 +908,7 @@ a:hover {
 .section-footer__logo {
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 .section-footer nav ul {
   display: flex;

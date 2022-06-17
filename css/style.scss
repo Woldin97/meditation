@@ -91,6 +91,11 @@ a:hover {
     box-shadow: 0 13px 28px rgba(26, 127, 114, 0.2);
 }
 
+.button-primary:hover {
+    background: linear-gradient(180deg, #01c3a9 0%, #23a291 100%);
+    transition: 0.2s;
+}
+
 // === / Common === //
 
 // === Header === //
@@ -184,6 +189,10 @@ a:hover {
         border: 0;
         border-radius: 50px;
         box-shadow: 0 20px 40px 0 rgba(21, 113, 101, 0.2);
+    }
+
+    &__button:hover {
+        background: linear-gradient(#016a5a, #016a5a);
     }
 
     &__content {
@@ -456,6 +465,7 @@ a:hover {
     text-align: center;
     background: url("../img/best-of-meditation-background.png");
     background-repeat: no-repeat;
+    background-size: cover;
 
     &__title {
         @include font-section-title;
@@ -471,7 +481,6 @@ a:hover {
     &__content {
         display: flex;
         justify-content: space-between;
-        padding: 70px 120px;
 
         &--image {
             width: 100%;
@@ -480,12 +489,15 @@ a:hover {
             max-height: 800px;
         }
 
+        @media (min-width: $screen-xxl-min) {
+            padding: 70px 120px;
+        }
+
         @media (max-width: $screen-xl-max) {
-            flex-direction: column;
-            align-items: center;
+            padding: 70px 20px;
 
             &--image {
-                margin-bottom: 100px;
+                display: none;
             }
         }
     }
@@ -530,15 +542,8 @@ a:hover {
         }
     }
 
-    @media (min-width: $screen-xxl-min) {
-        background-position: center center;
-        background-size: cover;
-    }
-
     @media (max-width: $screen-xl-max) {
-        background-attachment: fixed;
         background-position: center;
-        background-size: cover;
     }
 }
 
@@ -663,6 +668,7 @@ a:hover {
     &__logo {
         display: flex;
         justify-content: center;
+        cursor: pointer;
     }
 
     nav {
