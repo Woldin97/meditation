@@ -148,6 +148,12 @@ img {
             border-radius: 10px 10px 0 0;
         }
     }
+
+    @media (max-width: $screen-lg-max) {
+        &__nav {
+            display: none;
+        }
+    }
 }
 
 // === / Header === //
@@ -242,8 +248,10 @@ img {
         justify-content: space-between;
 
         .cards-item {
-            width: 420px;
-            height: 540px;
+            width: 95%;
+            max-width: 420px;
+            height: 100%;
+            max-height: 540px;
             padding-top: 50px;
             text-align: center;
             border-radius: 20px;
@@ -521,6 +529,10 @@ img {
             &--img {
                 display: none;
             }
+        }
+
+        @media (max-width: $screen-lg-max) {
+            flex-direction: column;
         }
     }
 
