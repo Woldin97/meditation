@@ -96,6 +96,12 @@ a:hover {
     transition: 0.2s;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
 // === / Common === //
 
 // === Header === //
@@ -111,9 +117,7 @@ a:hover {
     }
 
     img {
-        width: 100%;
         max-width: 150px;
-        height: 100%;
         max-height: 120px;
     }
 
@@ -247,6 +251,11 @@ a:hover {
 
             &__icon {
                 margin-bottom: 20px;
+
+                img {
+                    max-width: 100px;
+                    max-height: 100px;
+                }
             }
 
             &__title {
@@ -306,6 +315,11 @@ a:hover {
         display: flex;
         padding: 70px 150px 120px;
 
+        &--img {
+            max-width: 745px;
+            max-height: 595px;
+        }
+
         &-exercise {
             margin-left: 156px;
         }
@@ -334,6 +348,10 @@ a:hover {
                 display: flex;
                 justify-content: end;
                 visibility: hidden;
+
+                &--img {
+                    max-width: 100px;
+                }
             }
 
             &:hover {
@@ -402,6 +420,11 @@ a:hover {
         justify-content: space-between;
         padding: 70px 150px 120px;
 
+        &--img {
+            max-width: 695px;
+            max-height: 680px;
+        }
+
         @media (max-width: $screen-xl-max) {
             flex-direction: column;
             align-items: center;
@@ -449,10 +472,11 @@ a:hover {
 
             margin: 0 auto;
         }
-    }
 
-    .button-play-music {
-        cursor: pointer;
+        .button-play-music {
+            max-width: 80px;
+            max-height: 80px;
+        }
     }
 }
 
@@ -482,10 +506,8 @@ a:hover {
         display: flex;
         justify-content: space-between;
 
-        &--image {
-            width: 100%;
+        &--img {
             max-width: 340px;
-            height: 100%;
             max-height: 800px;
         }
 
@@ -496,7 +518,7 @@ a:hover {
         @media (max-width: $screen-xl-max) {
             padding: 70px 20px;
 
-            &--image {
+            &--img {
                 display: none;
             }
         }
@@ -572,6 +594,11 @@ a:hover {
         display: flex;
         margin: 0 200px;
 
+        &__img {
+            max-width: 705px;
+            max-height: 555px;
+        }
+
         &__content {
             display: flex;
             flex-direction: column;
@@ -604,6 +631,11 @@ a:hover {
         display: flex;
         justify-content: center;
         margin: 70px 200px;
+
+        &__img {
+            max-width: 765px;
+            max-height: 532px;
+        }
 
         &__content {
             display: flex;
@@ -669,6 +701,11 @@ a:hover {
         display: flex;
         justify-content: center;
         cursor: pointer;
+
+        &--img {
+            max-width: 150px;
+            max-height: 120px;
+        }
     }
 
     nav {
@@ -705,6 +742,11 @@ a:hover {
         &-item {
             margin-right: 30px;
             cursor: pointer;
+
+            .social-logo {
+                max-width: 55px;
+                max-height: 55px;
+            }
         }
     }
 }

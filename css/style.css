@@ -388,6 +388,12 @@ a:hover {
   transition: 0.2s;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
 .section-header {
   height: 100%;
   background-color: #fff;
@@ -398,9 +404,7 @@ a:hover {
   justify-content: space-around;
 }
 .section-header img {
-  width: 100%;
   max-width: 150px;
-  height: 100%;
   max-height: 120px;
 }
 .section-header ul {
@@ -512,6 +516,10 @@ a:hover {
 .section-second .cards-list .cards-item__icon {
   margin-bottom: 20px;
 }
+.section-second .cards-list .cards-item__icon img {
+  max-width: 100px;
+  max-height: 100px;
+}
 .section-second .cards-list .cards-item__title {
   margin-bottom: 20px;
   font-size: 32px;
@@ -568,6 +576,10 @@ a:hover {
   padding: 70px 150px 120px;
   /* stylelint-disable-next-line selector-class-pattern */
 }
+.section-practice__content--img {
+  max-width: 745px;
+  max-height: 595px;
+}
 .section-practice__content-exercise {
   margin-left: 156px;
 }
@@ -595,6 +607,9 @@ a:hover {
   display: flex;
   justify-content: end;
   visibility: hidden;
+}
+.section-practice__content .exercise-item__arrow--img {
+  max-width: 100px;
 }
 .section-practice__content .exercise-item:hover {
   background: #fff;
@@ -655,6 +670,10 @@ a:hover {
   justify-content: space-between;
   padding: 70px 150px 120px;
 }
+.section-music__content--img {
+  max-width: 695px;
+  max-height: 680px;
+}
 @media (max-width: 1399px) {
   .section-music__content {
     flex-direction: column;
@@ -701,8 +720,9 @@ a:hover {
   color: rgba(0, 0, 0, 0.5);
   margin: 0 auto;
 }
-.section-music .button-play-music {
-  cursor: pointer;
+.section-music .music-item .button-play-music {
+  max-width: 80px;
+  max-height: 80px;
 }
 
 .section-best-of-meditation {
@@ -732,10 +752,8 @@ a:hover {
   display: flex;
   justify-content: space-between;
 }
-.section-best-of-meditation__content--image {
-  width: 100%;
+.section-best-of-meditation__content--img {
   max-width: 340px;
-  height: 100%;
   max-height: 800px;
 }
 @media (min-width: 1400px) {
@@ -747,7 +765,7 @@ a:hover {
   .section-best-of-meditation__content {
     padding: 70px 20px;
   }
-  .section-best-of-meditation__content--image {
+  .section-best-of-meditation__content--img {
     display: none;
   }
 }
@@ -818,6 +836,10 @@ a:hover {
   display: flex;
   margin: 0 200px;
 }
+.section-transform-your-body .antistress-meditation__img {
+  max-width: 705px;
+  max-height: 555px;
+}
 .section-transform-your-body .antistress-meditation__content {
   display: flex;
   flex-direction: column;
@@ -849,6 +871,10 @@ a:hover {
   display: flex;
   justify-content: center;
   margin: 70px 200px;
+}
+.section-transform-your-body .backyark-band-meditation__img {
+  max-width: 765px;
+  max-height: 532px;
 }
 .section-transform-your-body .backyark-band-meditation__content {
   display: flex;
@@ -910,6 +936,10 @@ a:hover {
   justify-content: center;
   cursor: pointer;
 }
+.section-footer__logo--img {
+  max-width: 150px;
+  max-height: 120px;
+}
 .section-footer nav ul {
   display: flex;
 }
@@ -937,4 +967,8 @@ a:hover {
 .section-footer__nav-socials-item {
   margin-right: 30px;
   cursor: pointer;
+}
+.section-footer__nav-socials-item .social-logo {
+  max-width: 55px;
+  max-height: 55px;
 }
