@@ -604,7 +604,6 @@ img {
 
     .antistress-meditation {
         display: flex;
-        margin: 0 200px;
 
         &__img {
             max-width: 705px;
@@ -614,8 +613,6 @@ img {
         &__content {
             display: flex;
             flex-direction: column;
-            padding: 120px 0;
-            margin-left: 198px;
             text-align: left;
 
             &--title {
@@ -637,12 +634,33 @@ img {
             flex-direction: column;
             align-items: center;
         }
+
+        @media (min-width: $screen-xl-min) {
+            margin: 0 200px;
+
+            &__content {
+                padding: 120px 0;
+                margin-left: 200px;
+            }
+        }
+
+        @media (max-width: $screen-lg-max) {
+            padding: 0 20px;
+
+            &__img {
+                min-width: 280px;
+                min-height: 220px;
+            }
+
+            &__content {
+                padding-top: 100px;
+            }
+        }
     }
 
     .backyark-band-meditation {
         display: flex;
         justify-content: center;
-        margin: 70px 200px;
 
         &__img {
             max-width: 765px;
@@ -652,8 +670,7 @@ img {
         &__content {
             display: flex;
             flex-direction: column;
-            padding: 95px 0;
-            margin-right: 135px;
+            padding: 100px 0;
             text-align: left;
 
             &--title {
@@ -671,9 +688,30 @@ img {
             }
         }
 
-        @media (max-width: $screen-xl-max) {
+        @media (min-width: $screen-xxl-min) {
+            margin: 70px 200px;
+
+            &__content {
+                margin-right: 135px;
+            }
+        }
+
+        @media (min-width: $screen-xl-min) {
             flex-direction: column;
             align-items: center;
+            margin: 0 200px;
+        }
+
+        @media (max-width: $screen-lg-max) {
+            flex-direction: column;
+            align-items: center;
+            padding: 0 20px;
+            margin: 0;
+
+            &__img {
+                min-width: 306px;
+                min-height: 212px;
+            }
         }
     }
 

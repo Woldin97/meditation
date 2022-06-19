@@ -846,7 +846,6 @@ img {
 }
 .section-transform-your-body .antistress-meditation {
   display: flex;
-  margin: 0 200px;
 }
 .section-transform-your-body .antistress-meditation__img {
   max-width: 705px;
@@ -855,8 +854,6 @@ img {
 .section-transform-your-body .antistress-meditation__content {
   display: flex;
   flex-direction: column;
-  padding: 120px 0;
-  margin-left: 198px;
   text-align: left;
 }
 .section-transform-your-body .antistress-meditation__content--title {
@@ -879,10 +876,30 @@ img {
     align-items: center;
   }
 }
+@media (min-width: 1200px) {
+  .section-transform-your-body .antistress-meditation {
+    margin: 0 200px;
+  }
+  .section-transform-your-body .antistress-meditation__content {
+    padding: 120px 0;
+    margin-left: 200px;
+  }
+}
+@media (max-width: 1199px) {
+  .section-transform-your-body .antistress-meditation {
+    padding: 0 20px;
+  }
+  .section-transform-your-body .antistress-meditation__img {
+    min-width: 280px;
+    min-height: 220px;
+  }
+  .section-transform-your-body .antistress-meditation__content {
+    padding-top: 100px;
+  }
+}
 .section-transform-your-body .backyark-band-meditation {
   display: flex;
   justify-content: center;
-  margin: 70px 200px;
 }
 .section-transform-your-body .backyark-band-meditation__img {
   max-width: 765px;
@@ -891,8 +908,7 @@ img {
 .section-transform-your-body .backyark-band-meditation__content {
   display: flex;
   flex-direction: column;
-  padding: 95px 0;
-  margin-right: 135px;
+  padding: 100px 0;
   text-align: left;
 }
 .section-transform-your-body .backyark-band-meditation__content--title {
@@ -909,10 +925,31 @@ img {
   color: rgba(0, 0, 0, 0.5);
   margin-bottom: 30px;
 }
-@media (max-width: 1399px) {
+@media (min-width: 1400px) {
+  .section-transform-your-body .backyark-band-meditation {
+    margin: 70px 200px;
+  }
+  .section-transform-your-body .backyark-band-meditation__content {
+    margin-right: 135px;
+  }
+}
+@media (min-width: 1200px) {
   .section-transform-your-body .backyark-band-meditation {
     flex-direction: column;
     align-items: center;
+    margin: 0 200px;
+  }
+}
+@media (max-width: 1199px) {
+  .section-transform-your-body .backyark-band-meditation {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    margin: 0;
+  }
+  .section-transform-your-body .backyark-band-meditation__img {
+    min-width: 306px;
+    min-height: 212px;
   }
 }
 @media (min-width: 1400px) {
