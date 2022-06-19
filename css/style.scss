@@ -718,6 +718,10 @@ img {
             max-width: 150px;
             max-height: 120px;
         }
+
+        @media (max-width: $screen-lg-max) {
+            padding-top: 25px;
+        }
     }
 
     nav {
@@ -734,16 +738,33 @@ img {
             font-weight: 400;
             line-height: 40px;
             color: $color-black;
+
+            @media (max-width: $screen-lg-max) {
+                flex-direction: column;
+                align-items: center;
+            }
         }
 
         &-item {
-            padding-right: 20px;
-            margin-right: 20px;
             cursor: pointer;
         }
 
-        &-item:not(:last-child) {
-            border-right: 2px solid;
+        @media (min-width: $screen-xl-min) {
+            &-item {
+                padding-right: 20px;
+                margin-right: 20px;
+                cursor: pointer;
+            }
+
+            &-item:not(:last-child) {
+                border-right: 2px solid;
+            }
+        }
+
+        @media (max-width: $screen-lg-max) {
+            &-item {
+                margin-bottom: 10px;
+            }
         }
     }
 
