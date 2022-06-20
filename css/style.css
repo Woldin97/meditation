@@ -448,9 +448,7 @@ img {
 .section-hero__title {
   font-family: "Merienda One", cursive;
   margin: 0 auto 22px;
-  font-size: 54px;
   font-weight: 400;
-  line-height: 70px;
   color: #fff;
 }
 .section-hero__description {
@@ -480,24 +478,35 @@ img {
   background: linear-gradient(#016a5a, #016a5a);
 }
 .section-hero__content img {
-  width: 100%;
   max-width: 590px;
-  height: 100%;
   max-height: 560px;
+}
+@media (max-width: 991px) {
+  .section-hero__title {
+    font-size: 54px;
+    line-height: 70px;
+  }
+  .section-hero__description {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 992px) {
+  .section-hero__title {
+    font-size: 68px;
+    line-height: 88px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .section-hero__title {
+    width: 70%;
+  }
+  .section-hero__description {
+    width: 80%;
+  }
 }
 @media (min-width: 1400px) {
   .section-hero__title {
-    width: 45%;
-  }
-  .section-hero__description {
     width: 55%;
-  }
-}
-@media (min-width: 1200px) {
-  .section-hero__title {
-    width: 70%;
-    font-size: 68px;
-    line-height: 88px;
   }
   .section-hero__description {
     width: 80%;
