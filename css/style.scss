@@ -61,7 +61,6 @@ body {
 }
 
 ul {
-    padding: 0;
     margin: 0;
     list-style-type: none;
 }
@@ -260,11 +259,10 @@ img {
     .cards-list {
         display: flex;
         justify-content: space-between;
+        padding: 0 20px;
 
         .cards-item {
-            width: 95%;
             max-width: 420px;
-            height: 100%;
             max-height: 540px;
             padding-top: 50px;
             text-align: center;
@@ -283,7 +281,7 @@ img {
             &__title {
                 margin-bottom: 20px;
                 font-size: 32px;
-                font-weight: 500px;
+                font-weight: 500;
                 line-height: 48px;
             }
 
