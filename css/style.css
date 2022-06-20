@@ -1043,7 +1043,6 @@ img {
   .section-footer__nav-item {
     padding-right: 20px;
     margin-right: 20px;
-    cursor: pointer;
   }
   .section-footer__nav-item:not(:last-child) {
     border-right: 2px solid;
