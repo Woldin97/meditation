@@ -333,13 +333,16 @@ img {
 
     &__content {
         display: flex;
-        padding: 70px 150px 120px;
 
         &--img {
             min-width: 300px;
             max-width: 745px;
             min-height: 240px;
             max-height: 595px;
+        }
+
+        .exercise-list {
+            padding: 0;
         }
 
         .exercise-item {
@@ -384,15 +387,45 @@ img {
             visibility: visible;
         }
 
-        @media (min-width: $screen-xl-min) {
+        @media (max-width: $screen-xl-max) {
+            flex-direction: column;
+            align-items: center;
+
+            &-exercise {
+                margin-top: 20px;
+            }
+        }
+
+        @media (min-width: $screen-xxl-min) {
             &-exercise {
                 margin-left: 155px;
             }
         }
+    }
 
-        @media (max-width: $screen-xl-max) {
-            flex-direction: column;
-            align-items: center;
+    @media (max-width: $screen-md-max) {
+        &__description {
+            padding: 0 20px;
+        }
+
+        &__content {
+            padding: 70px 20px 120px;
+        }
+    }
+
+    @media (min-width: $screen-xl-min) and (max-width: $screen-xl-max) {
+        &__title {
+            width: 60%;
+        }
+
+        &__description {
+            width: 80%;
+        }
+    }
+
+    @media (min-width: $screen-xl-min) {
+        &__content {
+            padding: 70px 150px 120px;
         }
     }
 
@@ -403,16 +436,6 @@ img {
 
         &__description {
             width: 55%;
-        }
-    }
-
-    @media (max-width: $screen-xl-max) {
-        &__title {
-            width: 60%;
-        }
-
-        &__description {
-            width: 80%;
         }
     }
 }

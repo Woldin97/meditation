@@ -589,7 +589,6 @@ img {
 }
 .section-practice__content {
   display: flex;
-  padding: 70px 150px 120px;
   /* stylelint-disable-next-line selector-class-pattern */
 }
 .section-practice__content--img {
@@ -597,6 +596,9 @@ img {
   max-width: 745px;
   min-height: 240px;
   max-height: 595px;
+}
+.section-practice__content .exercise-list {
+  padding: 0;
 }
 .section-practice__content .exercise-item {
   max-width: 720px;
@@ -634,15 +636,39 @@ img {
 .section-practice__content .exercise-item:hover .exercise-item__arrow {
   visibility: visible;
 }
-@media (min-width: 1200px) {
-  .section-practice__content-exercise {
-    margin-left: 155px;
-  }
-}
 @media (max-width: 1399px) {
   .section-practice__content {
     flex-direction: column;
     align-items: center;
+  }
+  .section-practice__content-exercise {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 1400px) {
+  .section-practice__content-exercise {
+    margin-left: 155px;
+  }
+}
+@media (max-width: 991px) {
+  .section-practice__description {
+    padding: 0 20px;
+  }
+  .section-practice__content {
+    padding: 70px 20px 120px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .section-practice__title {
+    width: 60%;
+  }
+  .section-practice__description {
+    width: 80%;
+  }
+}
+@media (min-width: 1200px) {
+  .section-practice__content {
+    padding: 70px 150px 120px;
   }
 }
 @media (min-width: 1400px) {
@@ -651,14 +677,6 @@ img {
   }
   .section-practice__description {
     width: 55%;
-  }
-}
-@media (max-width: 1399px) {
-  .section-practice__title {
-    width: 60%;
-  }
-  .section-practice__description {
-    width: 80%;
   }
 }
 
