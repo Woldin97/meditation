@@ -209,7 +209,7 @@ img {
         }
     }
 
-    @media (max-width: $screen-md-max) {
+    @media (max-width: $screen-lg-max) {
         &__title {
             font-size: 54px;
             line-height: 70px;
@@ -403,7 +403,7 @@ img {
         }
     }
 
-    @media (max-width: $screen-md-max) {
+    @media (max-width: $screen-lg-max) {
         &__description {
             padding: 0 20px;
         }
@@ -458,14 +458,12 @@ img {
     &__description {
         @include font-description;
 
-        width: 60%;
         margin: 0 auto;
     }
 
     &__content {
         display: flex;
         justify-content: space-between;
-        padding: 70px 150px 120px;
 
         &--img {
             min-width: 340px;
@@ -481,6 +479,7 @@ img {
     }
 
     .music-list {
+        padding: 0;
         margin: 65px 0 0;
 
         @media (max-width: $screen-xl-max) {
@@ -527,6 +526,26 @@ img {
             &__information {
                 padding: 0 80px;
             }
+        }
+    }
+
+    @media (max-width: $screen-lg-max) {
+        &__description {
+            padding: 0 20px;
+        }
+
+        &__content {
+            padding: 70px 20px 120px;
+        }
+    }
+
+    @media (min-width: $screen-xl-min) {
+        &__description {
+            width: 60%;
+        }
+
+        &__content {
+            padding: 70px 150px 120px;
         }
     }
 }
