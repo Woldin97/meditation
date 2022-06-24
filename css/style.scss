@@ -622,6 +622,7 @@ img {
 
         @media (max-width: $screen-lg-max) {
             flex-direction: column;
+            align-items: center;
         }
     }
 
@@ -661,8 +662,22 @@ img {
 
             &-description {
                 @include font-description;
+            }
 
-                width: 90%;
+            @media (max-width: $screen-lg-max) {
+                &-description {
+                    /* stylelint-disable-next-line value-no-vendor-prefix */
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+            }
+
+            @media (min-width: $screen-xl-min) {
+                &-description {
+                    width: 90%;
+                }
             }
         }
 
@@ -705,7 +720,6 @@ img {
     &__description {
         @include font-description;
 
-        width: 60%;
         margin: 0 auto 70px;
     }
 
@@ -737,20 +751,6 @@ img {
             }
         }
 
-        @media (max-width: $screen-xl-max) {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        @media (min-width: $screen-xl-min) {
-            margin: 0 200px;
-
-            &__content {
-                padding: 120px 0;
-                margin-left: 200px;
-            }
-        }
-
         @media (max-width: $screen-lg-max) {
             padding: 0 20px;
 
@@ -761,6 +761,21 @@ img {
 
             &__content {
                 padding-top: 100px;
+            }
+        }
+
+        @media (max-width: $screen-xl-max) {
+            flex-direction: column;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        @media (min-width: $screen-xl-min) {
+            margin: 0 200px;
+
+            &__content {
+                padding: 120px 0;
+                margin-left: 200px;
             }
         }
     }
@@ -795,30 +810,53 @@ img {
             }
         }
 
-        @media (min-width: $screen-xxl-min) {
-            margin: 70px 200px;
-
-            &__content {
-                margin-right: 135px;
-            }
-        }
-
-        @media (min-width: $screen-xl-min) {
-            flex-direction: column;
-            align-items: center;
-            margin: 0 200px;
-        }
-
-        @media (max-width: $screen-lg-max) {
+        @media (max-width: $screen-xl-max) {
             flex-direction: column;
             align-items: center;
             padding: 0 20px;
-            margin: 0;
 
             &__img {
                 min-width: 306px;
                 min-height: 212px;
             }
+        }
+
+        @media (min-width: $screen-xl-min) {
+            margin: 70px 200px;
+        }
+
+        @media (min-width: $screen-xxl-min) {
+            &__content {
+                margin-right: 135px;
+            }
+        }
+    }
+
+    @media (max-width: $screen-lg-max) {
+        &__title {
+            padding: 0  20px;
+        }
+
+        &__description {
+            padding: 0  20px;
+        }
+    }
+
+    @media (max-width: $screen-xl-max) {
+        flex-direction: column;
+        align-items: center;
+        background-size: contain;
+    }
+
+    @media (min-width: $screen-xl-min) {
+        &__description {
+            width: 60%;
+        }
+    }
+
+    @media (min-width: $screen-xl-min) and (max-width: $screen-xl-max) {
+        &__title {
+            width: 55%;
         }
     }
 
@@ -827,16 +865,6 @@ img {
 
         &__title {
             width: 35%;
-        }
-    }
-
-    @media (max-width: $screen-xl-max) {
-        flex-direction: column;
-        align-items: center;
-        background-size: contain;
-
-        &__title {
-            width: 55%;
         }
     }
 }
@@ -894,6 +922,12 @@ img {
             cursor: pointer;
         }
 
+        @media (max-width: $screen-lg-max) {
+            &-item {
+                margin-bottom: 10px;
+            }
+        }
+
         @media (min-width: $screen-xl-min) {
             &-item {
                 padding-right: 20px;
@@ -902,12 +936,6 @@ img {
 
             &-item:not(:last-child) {
                 border-right: 2px solid;
-            }
-        }
-
-        @media (max-width: $screen-lg-max) {
-            &-item {
-                margin-bottom: 10px;
             }
         }
     }

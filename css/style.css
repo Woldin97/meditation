@@ -850,6 +850,7 @@ img {
 @media (max-width: 1199px) {
   .section-best-of-meditation__content {
     flex-direction: column;
+    align-items: center;
   }
 }
 .section-best-of-meditation .benefits-list {
@@ -888,7 +889,20 @@ img {
   font-weight: 400;
   line-height: 30px;
   color: rgba(0, 0, 0, 0.5);
-  width: 90%;
+}
+@media (max-width: 1199px) {
+  .section-best-of-meditation .benefits-list__item-description {
+    /* stylelint-disable-next-line value-no-vendor-prefix */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1200px) {
+  .section-best-of-meditation .benefits-list__item-description {
+    width: 90%;
+  }
 }
 @media (min-width: 1200px) {
   .section-best-of-meditation .benefits-list {
@@ -930,7 +944,6 @@ img {
   font-weight: 400;
   line-height: 30px;
   color: rgba(0, 0, 0, 0.5);
-  width: 60%;
   margin: 0 auto 70px;
 }
 .section-transform-your-body .antistress-meditation {
@@ -959,21 +972,6 @@ img {
   color: rgba(0, 0, 0, 0.5);
   margin-bottom: 30px;
 }
-@media (max-width: 1399px) {
-  .section-transform-your-body .antistress-meditation {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-@media (min-width: 1200px) {
-  .section-transform-your-body .antistress-meditation {
-    margin: 0 200px;
-  }
-  .section-transform-your-body .antistress-meditation__content {
-    padding: 120px 0;
-    margin-left: 200px;
-  }
-}
 @media (max-width: 1199px) {
   .section-transform-your-body .antistress-meditation {
     padding: 0 20px;
@@ -984,6 +982,22 @@ img {
   }
   .section-transform-your-body .antistress-meditation__content {
     padding-top: 100px;
+  }
+}
+@media (max-width: 1399px) {
+  .section-transform-your-body .antistress-meditation {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .section-transform-your-body .antistress-meditation {
+    margin: 0 200px;
+  }
+  .section-transform-your-body .antistress-meditation__content {
+    padding: 120px 0;
+    margin-left: 200px;
   }
 }
 .section-transform-your-body .backyark-band-meditation {
@@ -1014,39 +1028,33 @@ img {
   color: rgba(0, 0, 0, 0.5);
   margin-bottom: 30px;
 }
-@media (min-width: 1400px) {
-  .section-transform-your-body .backyark-band-meditation {
-    margin: 70px 200px;
-  }
-  .section-transform-your-body .backyark-band-meditation__content {
-    margin-right: 135px;
-  }
-}
-@media (min-width: 1200px) {
-  .section-transform-your-body .backyark-band-meditation {
-    flex-direction: column;
-    align-items: center;
-    margin: 0 200px;
-  }
-}
-@media (max-width: 1199px) {
+@media (max-width: 1399px) {
   .section-transform-your-body .backyark-band-meditation {
     flex-direction: column;
     align-items: center;
     padding: 0 20px;
-    margin: 0;
   }
   .section-transform-your-body .backyark-band-meditation__img {
     min-width: 306px;
     min-height: 212px;
   }
 }
-@media (min-width: 1400px) {
-  .section-transform-your-body {
-    background-size: 100% 100%;
+@media (min-width: 1200px) {
+  .section-transform-your-body .backyark-band-meditation {
+    margin: 70px 200px;
   }
+}
+@media (min-width: 1400px) {
+  .section-transform-your-body .backyark-band-meditation__content {
+    margin-right: 135px;
+  }
+}
+@media (max-width: 1199px) {
   .section-transform-your-body__title {
-    width: 35%;
+    padding: 0 20px;
+  }
+  .section-transform-your-body__description {
+    padding: 0 20px;
   }
 }
 @media (max-width: 1399px) {
@@ -1055,8 +1063,23 @@ img {
     align-items: center;
     background-size: contain;
   }
+}
+@media (min-width: 1200px) {
+  .section-transform-your-body__description {
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
   .section-transform-your-body__title {
     width: 55%;
+  }
+}
+@media (min-width: 1400px) {
+  .section-transform-your-body {
+    background-size: 100% 100%;
+  }
+  .section-transform-your-body__title {
+    width: 35%;
   }
 }
 
@@ -1104,6 +1127,11 @@ img {
 .section-footer__nav-item {
   cursor: pointer;
 }
+@media (max-width: 1199px) {
+  .section-footer__nav-item {
+    margin-bottom: 10px;
+  }
+}
 @media (min-width: 1200px) {
   .section-footer__nav-item {
     padding-right: 20px;
@@ -1111,11 +1139,6 @@ img {
   }
   .section-footer__nav-item:not(:last-child) {
     border-right: 2px solid;
-  }
-}
-@media (max-width: 1199px) {
-  .section-footer__nav-item {
-    margin-bottom: 10px;
   }
 }
 .section-footer__nav-socials {
