@@ -719,7 +719,7 @@ img {
   }
 }
 .section-music .music-list {
-  padding: 0;
+  padding: 0 20px;
   margin: 65px 0 0;
 }
 @media (max-width: 1399px) {
@@ -729,6 +729,7 @@ img {
 }
 .section-music .music-item {
   max-width: 650px;
+  min-height: 150px;
   max-height: 150px;
   margin-bottom: 35px;
 }
@@ -736,7 +737,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 40px;
   text-align: left;
   background-image: url("../img/music-item-background.png");
   background-repeat: no-repeat;
@@ -744,25 +744,47 @@ img {
   background-size: cover;
 }
 .section-music .music-item__title {
-  margin-bottom: 10px;
-  font-size: 32px;
   font-weight: 500;
-  line-height: 48px;
 }
 .section-music .music-item__description {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 30px;
-  color: rgba(0, 0, 0, 0.5);
   margin: 0 auto;
 }
 .section-music .music-item .button-play-music {
   max-width: 80px;
   max-height: 80px;
 }
-@media (min-width: 1200px) {
+@media (max-width: 767px) {
+  .section-music .music-item__content {
+    height: 150px;
+  }
+  .section-music .music-item__information {
+    margin: 10px 0 0 20px;
+  }
+  .section-music .music-item__title {
+    font-size: 18px;
+  }
+  .section-music .music-item__description {
+    padding-bottom: 20px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+@media (min-width: 768px) {
+  .section-music .music-item__content {
+    padding: 30px 40px;
+  }
   .section-music .music-item__information {
     padding: 0 80px;
+  }
+  .section-music .music-item__title {
+    margin-bottom: 10px;
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .section-music .music-item__description {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.5);
   }
 }
 @media (max-width: 1199px) {
@@ -802,7 +824,6 @@ img {
   font-weight: 400;
   line-height: 30px;
   color: rgba(0, 0, 0, 0.5);
-  width: 60%;
   margin: 0 auto;
 }
 .section-best-of-meditation__content {
@@ -830,6 +851,9 @@ img {
   .section-best-of-meditation__content {
     flex-direction: column;
   }
+}
+.section-best-of-meditation .benefits-list {
+  padding: 0;
 }
 .section-best-of-meditation .benefits-list__item {
   display: flex;
@@ -869,6 +893,16 @@ img {
 @media (min-width: 1200px) {
   .section-best-of-meditation .benefits-list {
     padding: 25px 35px;
+  }
+}
+@media (max-width: 1199px) {
+  .section-best-of-meditation__description {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .section-best-of-meditation__description {
+    width: 60%;
   }
 }
 @media (max-width: 1399px) {

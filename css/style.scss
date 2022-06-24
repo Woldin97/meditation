@@ -479,7 +479,7 @@ img {
     }
 
     .music-list {
-        padding: 0;
+        padding: 0 20px;
         margin: 65px 0 0;
 
         @media (max-width: $screen-xl-max) {
@@ -489,6 +489,7 @@ img {
 
     .music-item {
         max-width: 650px;
+        min-height: 150px;
         max-height: 150px;
         margin-bottom: 35px;
 
@@ -496,7 +497,6 @@ img {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 30px 40px;
             text-align: left;
             background-image: url("../img/music-item-background.png");
             background-repeat: no-repeat;
@@ -505,15 +505,10 @@ img {
         }
 
         &__title {
-            margin-bottom: 10px;
-            font-size: 32px;
             font-weight: 500;
-            line-height: 48px;
         }
 
         &__description {
-            @include font-description;
-
             margin: 0 auto;
         }
 
@@ -522,9 +517,42 @@ img {
             max-height: 80px;
         }
 
-        @media (min-width: $screen-xl-min) {
+        @media (max-width: $screen-sm-max) {
+            &__content {
+                height: 150px;
+            }
+
+            &__information {
+                margin: 10px 0 0 20px;
+            }
+
+            &__title {
+                font-size: 18px;
+            }
+
+            &__description {
+                padding-bottom: 20px;
+                color: rgba($color-black, 0.5);
+            }
+        }
+
+        @media (min-width: $screen-md-min) {
+            &__content {
+                padding: 30px 40px;
+            }
+
             &__information {
                 padding: 0 80px;
+            }
+
+            &__title {
+                margin-bottom: 10px;
+                font-size: 32px;
+                line-height: 48px;
+            }
+
+            &__description {
+                @include font-description;
             }
         }
     }
@@ -568,7 +596,6 @@ img {
     &__description {
         @include font-description;
 
-        width: 60%;
         margin: 0 auto;
     }
 
@@ -599,6 +626,8 @@ img {
     }
 
     .benefits-list {
+        padding: 0;
+
         &__item {
             display: flex;
             flex-direction: column;
@@ -639,6 +668,18 @@ img {
 
         @media (min-width: $screen-xl-min) {
             padding: 25px 35px;
+        }
+    }
+
+    @media (max-width: $screen-lg-max) {
+        &__description {
+            padding: 0 20px;
+        }
+    }
+
+    @media (min-width: $screen-xl-min) {
+        &__description {
+            width: 60%;
         }
     }
 
