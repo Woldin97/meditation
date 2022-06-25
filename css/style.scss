@@ -488,21 +488,18 @@ img {
     }
 
     .music-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         max-width: 650px;
         min-height: 150px;
         max-height: 150px;
         margin-bottom: 35px;
-
-        &__content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            text-align: left;
-            background-image: url("../img/music-item-background.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
+        text-align: left;
+        background-image: url("../img/music-item-background.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
 
         &__title {
             font-weight: 500;
@@ -517,42 +514,19 @@ img {
             max-height: 80px;
         }
 
-        @media (max-width: $screen-sm-max) {
-            &__content {
-                height: 150px;
-            }
+        @media (max-width: $screen-lg-max) {
+            padding: 20px;
 
             &__information {
-                margin: 10px 0 0 20px;
-            }
-
-            &__title {
-                font-size: 18px;
-            }
-
-            &__description {
-                padding-bottom: 20px;
-                color: rgba($color-black, 0.5);
+                padding: 20px;
             }
         }
 
-        @media (min-width: $screen-md-min) {
-            &__content {
-                padding: 30px 40px;
-            }
+        @media (min-width: $screen-xl-min) {
+            padding: 30px 40px;
 
             &__information {
                 padding: 0 80px;
-            }
-
-            &__title {
-                margin-bottom: 10px;
-                font-size: 32px;
-                line-height: 48px;
-            }
-
-            &__description {
-                @include font-description;
             }
         }
     }
