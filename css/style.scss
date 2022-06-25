@@ -218,6 +218,12 @@ img {
         &__description {
             padding: 0 20px;
         }
+
+        &__content {
+            img {
+                padding: 0 20px;
+            }
+        }
     }
 
     @media (min-width: $screen-lg-min) {
@@ -253,7 +259,7 @@ img {
 // === Section2 === //
 
 .section-second {
-    padding: 120px 0 40px;
+    padding: 120px 0;
     background-color: $color-white;
 
     .cards-list {
@@ -314,8 +320,7 @@ img {
 // === Practice === //
 
 .section-practice {
-    padding-top: 70px;
-    margin-top: 40px;
+    padding: 70px 0;
     text-align: center;
     background: url("../img/exercise-background.png");
     background-repeat: no-repeat;
@@ -409,7 +414,7 @@ img {
         }
 
         &__content {
-            padding: 70px 20px 120px;
+            padding: 70px 20px 0;
         }
     }
 
@@ -425,7 +430,7 @@ img {
 
     @media (min-width: $screen-xl-min) {
         &__content {
-            padding: 70px 150px 120px;
+            padding: 70px 150px 0;
         }
     }
 
@@ -445,7 +450,7 @@ img {
 // === Music === //
 
 .section-music {
-    padding-top: 60px;
+    padding: 70px 0;
     text-align: center;
     background: url("../img/background-music.png");
     background-repeat: no-repeat;
@@ -537,7 +542,7 @@ img {
         }
 
         &__content {
-            padding: 70px 20px 120px;
+            padding: 70px 20px 0;
         }
     }
 
@@ -547,7 +552,7 @@ img {
         }
 
         &__content {
-            padding: 70px 150px 120px;
+            padding: 70px 150px 0;
         }
     }
 }
@@ -557,7 +562,7 @@ img {
 // === Best of meditation === //
 
 .section-best-of-meditation {
-    padding-top: 155px;
+    padding: 120px 0;
     text-align: center;
     background: url("../img/best-of-meditation-background.png");
     background-repeat: no-repeat;
@@ -582,8 +587,9 @@ img {
             max-height: 800px;
         }
 
-        @media (min-width: $screen-xxl-min) {
-            padding: 70px 120px;
+        @media (max-width: $screen-lg-max) {
+            flex-direction: column;
+            align-items: center;
         }
 
         @media (max-width: $screen-xl-max) {
@@ -594,9 +600,8 @@ img {
             }
         }
 
-        @media (max-width: $screen-lg-max) {
-            flex-direction: column;
-            align-items: center;
+        @media (min-width: $screen-xxl-min) {
+            padding: 70px 120px 0;
         }
     }
 
@@ -682,7 +687,7 @@ img {
 // === Transform your body === //
 
 .section-transform-your-body {
-    padding-top: 68px;
+    padding: 70px 0;
     text-align: center;
     background: url("../img/transform-your-body-background.png");
     background-repeat: no-repeat;
@@ -745,7 +750,7 @@ img {
         }
 
         @media (min-width: $screen-xl-min) {
-            margin: 0 200px;
+            padding: 0 200px;
 
             &__content {
                 padding: 120px 0;
@@ -796,7 +801,7 @@ img {
         }
 
         @media (min-width: $screen-xl-min) {
-            margin: 70px 200px;
+            padding: 70px 200px 0;
         }
 
         @media (min-width: $screen-xxl-min) {
@@ -874,6 +879,7 @@ img {
     nav {
         ul {
             display: flex;
+            padding: 0;
         }
     }
 
