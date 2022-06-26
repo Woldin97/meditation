@@ -395,19 +395,29 @@ img {
 
 .section-header {
   height: 100%;
-  background-color: #fff;
 }
 .section-header .section-inner {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.section-header img {
-  max-width: 150px;
-  max-height: 120px;
+.section-header .section-inner::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: #fff;
 }
-.section-header ul {
-  display: flex;
+.section-header img {
+  position: relative;
+  z-index: 3;
+}
+.section-header__nav {
+  z-index: 3;
 }
 .section-header li {
   height: 130px;
@@ -431,8 +441,80 @@ img {
   border-radius: 10px 10px 0 0;
 }
 @media (max-width: 1199px) {
+  .section-header img {
+    width: 60px;
+    height: 50px;
+  }
+  .section-header__burger {
+    position: relative;
+    z-index: 3;
+    display: block;
+    width: 30px;
+    height: 20px;
+  }
+  .section-header__burger span {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition: all 0.2s;
+  }
+  .section-header__burger::after, .section-header__burger::before {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background-color: #000;
+    transition: all 0.2s;
+  }
+  .section-header__burger::before {
+    top: 0;
+  }
+  .section-header__burger::after {
+    bottom: 0;
+  }
+  .section-header__burger.active::before {
+    top: 9px;
+    transform: rotate(45deg);
+  }
+  .section-header__burger.active::after {
+    bottom: 9px;
+    transform: rotate(-45deg);
+  }
+  .section-header__burger.active span {
+    transform: scale(0);
+  }
   .section-header__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 70px;
+    background-color: #1a7f72;
+    transition: all 0.2s;
+    transform: translateY(-100%);
+  }
+  .section-header__nav.active {
+    transform: translateY(0%);
+  }
+  .section-header ul {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .section-header img {
+    width: 150px;
+    height: 120px;
+  }
+  .section-header__burger {
     display: none;
+  }
+  .section-header ul {
+    display: flex;
   }
 }
 
