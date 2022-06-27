@@ -442,8 +442,8 @@ img {
 }
 @media (max-width: 1199px) {
   .section-header img {
-    width: 60px;
-    height: 50px;
+    max-width: 60px;
+    max-height: 50px;
   }
   .section-header__burger {
     position: relative;
@@ -507,8 +507,8 @@ img {
 }
 @media (min-width: 1200px) {
   .section-header img {
-    width: 150px;
-    height: 120px;
+    max-width: 150px;
+    max-height: 120px;
   }
   .section-header__burger {
     display: none;
@@ -592,7 +592,7 @@ img {
 }
 
 .section-second {
-  padding: 120px 0;
+  padding: 120px 0 70px;
   background-color: #fff;
 }
 .section-second .cards-list {
