@@ -11,4 +11,5 @@ burger.onclick = () => {
 headerNav.onclick = () => {
     burger.classList.toggle("active");
     headerNav.classList.toggle("active");
+    body.classList.toggle("lock");
 }
