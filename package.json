@@ -18,7 +18,6 @@
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-newer": "^1.4.0",
     "gulp-sass": "^5.1.0",
-    "gulp-version-number": "^0.2.4",
     "gulp-webp": "^4.0.1",
     "gulp-webp-html-nosvg": "^1.1.1",
     "postcss-scss": "^4.0.4",

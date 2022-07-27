@@ -2,7 +2,6 @@ const gulp = require("gulp");
 const sass = require('gulp-sass')(require('sass'));
 const browserSync = require("browser-sync");
 const webHtmlNoSvg = require("gulp-webp-html-nosvg");
-const versionNumber = require("gulp-version-number");
 const groupCssMediaQueries = require("gulp-group-css-media-queries");
 const webp = require("gulp-webp");
 const cleanCss = require("gulp-clean-css");
@@ -36,21 +35,7 @@ function js () {
 
 function html () {
     return gulp.src("./src/index.html")
-        .pipe(webHtmlNoSvg())
-        .pipe(versionNumber({
-            "value": "%DT%",
-            "append": {
-                "key": "_v",
-                "cover": 0,
-                "to": [
-                    "css",
-                    "js"
-                ]
-            },
-            "output": {
-                "file": "./version.json"
-            }
-        }))
+        .pipe(webHtmlNoSvg())        
         .pipe(gulp.dest("./dist/"))
 }
 
