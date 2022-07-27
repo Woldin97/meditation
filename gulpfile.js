@@ -3,7 +3,6 @@ const sass = require('gulp-sass')(require('sass'));
 const browserSync = require("browser-sync");
 const webHtmlNoSvg = require("gulp-webp-html-nosvg");
 const versionNumber = require("gulp-version-number");
-const webpCss = require("gulp-webpcss");
 const groupCssMediaQueries = require("gulp-group-css-media-queries");
 const webp = require("gulp-webp");
 const cleanCss = require("gulp-clean-css");
@@ -57,11 +56,7 @@ function html () {
 
 function scss () {
     return gulp.src("./src/css/style.css")
-        .pipe(groupCssMediaQueries())
-        .pipe(webpCss({
-            webpClass:'.webp',
-            noWebpClass: ".no-webp"
-        }))
+        .pipe(groupCssMediaQueries())        
         .pipe(autoPrefixer({
             overrideBrowserslist: ["last 3 version"],
             cascade: true
