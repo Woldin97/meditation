@@ -124,7 +124,7 @@ img {
             position: absolute;
             top: 0;
             left: 0;
-            z-index: 3;
+            z-index: 4;
             width: 100%;
             height: 100%;
             content: "";
@@ -134,7 +134,7 @@ img {
 
     img {
         position: relative;
-        z-index: 3;
+        z-index: 4;
     }
 
     &__nav {
@@ -173,7 +173,7 @@ img {
 
         &__burger {
             position: relative;
-            z-index: 3;
+            z-index: 4;
             display: block;
             width: 30px;
             height: 20px;
