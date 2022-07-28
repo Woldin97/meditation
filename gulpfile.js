@@ -1,17 +1,16 @@
 const gulp = require("gulp");
 const sass = require('gulp-sass')(require('sass'));
 const browserSync = require("browser-sync");
-const webHtmlNoSvg = require("gulp-webp-html-nosvg");
 const groupCssMediaQueries = require("gulp-group-css-media-queries");
-const webp = require("gulp-webp");
+const htmlmin = require("gulp-htmlmin");
 const cleanCss = require("gulp-clean-css");
 const autoPrefixer = require("gulp-autoprefixer");
 const newer = require("gulp-newer");
 
 function style () {
-    return gulp.src("./css/**/*.scss")
+    return gulp.src("./src/css/**/*.scss")
         .pipe((sass()))
-        .pipe(gulp.dest("./css"))
+        .pipe(gulp.dest("./src/css"))
         .pipe(browserSync.stream())
 }
 
@@ -21,12 +20,12 @@ function watch () {
             baseDir: "./src"
         }
     })
-    gulp.watch("./css/**/*.scss", style);
-    gulp.watch("./*.html").on('change', browserSync.reload);
-    gulp.watch("./js/*.js").on('change', browserSync.reload);
+    gulp.watch("./src/css/**/*.scss", style);
+    gulp.watch("./src/*.html").on('change', browserSync.reload);
+    gulp.watch("./src/js/*.js").on('change', browserSync.reload);
 }
 
-gulp.task("build", gulp.parallel(js, html, scss, images))
+gulp.task("build", gulp.parallel(js, html, gulp.series(style, scss), images))
 
 function js () {
     return gulp.src("./src/js/*.*")
@@ -35,7 +34,7 @@ function js () {
 
 function html () {
     return gulp.src("./src/index.html")
-        .pipe(webHtmlNoSvg())        
+        .pipe(htmlmin({ collapseWhitespace: true }))      
         .pipe(gulp.dest("./dist/"))
 }
 
@@ -53,8 +52,6 @@ function scss () {
 function images () {
     return gulp.src("./src/img/**/*.{jpg,jpeg,png,gif,webp}")
         .pipe(newer("./dist/img/**/*.{jpg,jpeg,png,gif,webp}"))
-        .pipe(gulp.dest("./dist/img"))
-        .pipe(webp())
         .pipe(gulp.dest("./dist/img"))        
 }
 
